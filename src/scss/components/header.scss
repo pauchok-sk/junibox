@@ -209,6 +209,9 @@
     display: flex;
     align-items: center;
     gap: 35px;
+    @include laptop {
+      gap: 20px;
+    }
     @include laptop-min {
       display: none;
     }

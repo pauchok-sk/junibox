@@ -1,0 +1,92 @@
+.intro {
+  padding: 115px 0px 30px 0px;
+  @include tablet {
+    padding: 215px 0px 50px 0px;
+  }
+  &__logo {
+    display: block;
+    width: 175px;
+    margin-bottom: 85px;
+    @include tablet {
+      margin: 0px auto 40px auto;
+    }
+  }
+  &__title {
+    max-width: 400px;
+    margin: 0px 0px 20px 0px;
+    @include tablet {
+      margin: 0px auto 20px auto;
+      text-align: center;
+    }
+  }
+  &__content {
+    font-size: 16px;
+    margin: 0px 0px 85px 0px;
+    @include tablet {
+      text-align: center;
+      margin: 0px auto 40px auto;
+    }
+  }
+  &__btn {
+    max-width: 265px;
+    width: 100%;
+    @include tablet {
+      margin: 0 auto;
+    }
+  }
+  &__slider-nav {
+    @include flex-between;
+    margin-top: 120px;
+    max-width: 450px;
+    width: 100%;
+    gap: 30px;
+    @include tablet {
+      margin-top: 45px;
+    }
+  }
+  &__slider-btn {
+    @include flex-center;
+    width: 30px;
+    height: 30px;
+    color: var(--chalice);
+    transition: color .2s ease;
+    &._prev {
+      transform: rotate(180deg);
+    }
+    @include hover {
+      color: var(--main);
+    }
+  }
+  &__slider-arrow {
+    width: 30px;
+    height: 15px;
+  }
+  &__slider-numbers {
+    display: flex;
+    gap: 20px;
+  }
+  &__number-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    color: #3a3837;
+
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--chalice);
+
+    transition: color .2s ease;
+    @include hover {
+      color: var(--main);
+    }
+  }
+  &__number-line {
+    width: 20px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: currentColor;
+  }
+}

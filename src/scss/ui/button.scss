@@ -1,8 +1,60 @@
-.btn {
+.btn-clear {
   cursor: pointer;
   background-color: transparent;
   border: none;
   border-radius: 0;
   padding: 0;
   color: inherit;
+}
+
+.btn {
+  @include flex-center;
+  position: relative;
+  cursor: pointer;
+  border: none;
+
+  width: fit-content;
+  min-height: 55px;
+  padding: 10px 30px;
+  border-radius: 100px;
+  box-shadow:
+    0px 4px 5px 0px rgba(240, 234, 230, 0.4) inset,
+    0px 10px 20px -10px rgba(131, 118, 111, 0.93);
+
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  transition: box-shadow 0.2s ease;
+  @include hover {
+    box-shadow: 0px 10px 20px -10px rgba(131, 118, 111, 0.93);
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    border-radius: 100px;
+    z-index: -1;
+  }
+  &::before {
+    background: radial-gradient(
+      140.25% 61.98% at 50.19% 0%,
+      #ccc3bd 0%,
+      #9e938c 100%
+    );
+    transition: opacity 0.2s ease;
+  }
+  &::after {
+    background: radial-gradient(140.25% 61.98% at 50.19% 0%, #90827A 0%, #90827A 100%);
+    opacity: 0;
+
+    transition: opacity 0.2s ease;
+  }
 }
