@@ -1,0 +1,279 @@
+.header {
+  &__top {
+    padding-top: 40px;
+    margin-bottom: 22px;
+    @include tablet {
+      padding-top: 20px;
+    }
+  }
+  &__top-container {
+    @include flex-between;
+    @include mobile {
+      justify-content: center;
+    }
+  }
+  &__soc {
+    display: flex;
+    gap: 30px;
+    flex: 0 1 250px;
+    @include tablet {
+      flex-basis: 130px;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+  &__soc-btn {
+    display: block;
+    width: 18px;
+    height: 18px;
+    transition: color 0.2s ease;
+    @include hover {
+      color: black;
+    }
+  }
+  &__soc-icon {
+    width: 100%;
+    height: 100%;
+  }
+  &__logo {
+    display: block;
+    width: 160px;
+    @include tablet-min {
+      width: 105px;
+    }
+  }
+  &__logo-img {
+    width: 100%;
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    flex: 0 1 250px;
+    @include tablet {
+      flex: none;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+  &__mail {
+    position: relative;
+    font-size: 12px;
+    @include hover {
+      &::before {
+        right: 0;
+      }
+    }
+    @include tablet {
+      display: none;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      right: 100%;
+      height: 1px;
+      background-color: currentColor;
+      transition: right 0.2s ease;
+    }
+  }
+  &__tel {
+    position: relative;
+    font-size: 15px;
+    font-weight: 700;
+    @include hover {
+      &::before {
+        right: 0;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      right: 100%;
+      height: 1px;
+      background-color: currentColor;
+      transition: right 0.2s ease;
+    }
+  }
+  &__main {
+    @include flex-between;
+    gap: 20px;
+    border-radius: 100px;
+    background-color: var(--storm);
+    @include laptop-min {
+      overflow: hidden;
+    }
+  }
+  &__menu-main {
+    border-right: 1px solid var(--bg);
+    @include laptop-min {
+      @include flex-center;
+      gap: 3px;
+      border-right: none;
+      width: 100%;
+    }
+    li {
+      &._mobile {
+        opacity: 0;
+        visibility: hidden;
+        width: 0;
+        height: 0px;
+        overflow: hidden;
+      }
+
+      @include laptop-min {
+        flex: 0 1 70px;
+        &._mobile {
+          opacity: 1;
+          visibility: visible;
+          width: auto;
+          height: auto;
+          overflow: visible;
+        }
+      }
+    }
+  }
+  &__menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: fit-content;
+    padding: 15px 35px;
+    min-height: 65px;
+    border-radius: 100px 0px 0px 100px;
+    transition: background-color 0.2s ease;
+    @include hover {
+      background-color: rgb(255, 255, 255, 0.9);
+    }
+    @include laptop-min {
+      position: relative;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      padding: 0;
+      gap: 6px;
+      border-radius: 0px;
+      min-height: 56px;
+      width: 100%;
+    }
+  }
+  &__menu-icon {
+    width: 15px;
+    height: 15px;
+    @include laptop-min {
+      color: var(--silver);
+    }
+  }
+  &__mobile-title {
+    display: none;
+    @include laptop-min {
+      display: block;
+      font-size: 8px;
+      font-weight: 500;
+      letter-spacing: 0.16px;
+      text-transform: uppercase;
+    }
+  }
+  &__menu-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.24px;
+    @include laptop-min {
+      display: none;
+    }
+  }
+  &__menu-number {
+    @include flex-center;
+    position: absolute;
+    top: 6px;
+    right: 18px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    background-color: var(--primary);
+    color: white;
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 0.16px;
+    text-transform: uppercase;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    @include laptop-min {
+      display: none;
+    }
+
+    a {
+      position: relative;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.24px;
+      text-transform: uppercase;
+      @include hover {
+        &::before {
+          right: 0;
+        }
+      }
+
+      &.dropdown__btn {
+        &::before {
+          display: none;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        height: 1px;
+        background-color: currentColor;
+        transition: right 0.2s ease;
+      }
+    }
+  }
+  &__clients {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-left: 1px solid var(--bg);
+    padding: 15px 30px;
+    border-radius: 0px 100px 100px 0px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
+    min-height: 65px;
+
+    transition: background-color 0.2s ease;
+    @include hover {
+      background-color: white;
+    }
+
+    @include laptop-min {
+      display: none;
+    }
+  }
+  &__clients-wrapper {
+    @include flex-center;
+    width: 40px;
+    height: 28px;
+    border-radius: 100px;
+    background-color: white;
+  }
+  &__clients-arrow {
+    width: 10px;
+    height: 10px;
+  }
+}
