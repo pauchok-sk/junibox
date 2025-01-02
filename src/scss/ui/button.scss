@@ -24,6 +24,7 @@
   font-size: 12px;
   font-weight: 700;
   color: white;
+  z-index: 1;
   transition: box-shadow 0.2s ease;
   @include hover {
     box-shadow: 0px 10px 20px -10px rgba(131, 118, 111, 0.93);
@@ -42,6 +43,7 @@
     inset: 0;
     border-radius: 100px;
     z-index: -1;
+    transition: opacity 0.2s ease;
   }
   &::before {
     background: radial-gradient(
@@ -49,12 +51,50 @@
       #ccc3bd 0%,
       #9e938c 100%
     );
-    transition: opacity 0.2s ease;
   }
   &::after {
-    background: radial-gradient(140.25% 61.98% at 50.19% 0%, #90827A 0%, #90827A 100%);
+    background: radial-gradient(
+      140.25% 61.98% at 50.19% 0%,
+      #90827a 0%,
+      #90827a 100%
+    );
     opacity: 0;
+  }
 
-    transition: opacity 0.2s ease;
+  &._gray {
+    box-shadow: 0px 20px 20px -20px rgba(84, 81, 79, 0.54);
+    &::before {
+      background: linear-gradient(
+        100deg,
+        #b9b8b7 7.8%,
+        #cecece 27.76%,
+        #b9b8b7 46.93%
+      );
+    }
+    &::after {
+      background: var(--chalice);
+    }
+  }
+  &._primary {
+    box-shadow: 0px 15px 20px -10px rgba(84, 81, 79, 0.54);
+    &::before {
+      background: radial-gradient(
+        162.09% 64.58% at 50% -29.46%,
+        #6aa3ee 0%,
+        #4379be 100%
+      );
+    }
+    &::after {
+      background: radial-gradient(
+        162.09% 64.58% at 50% -29.46%,
+        #518ede 0%,
+        #27558f 100%
+      );
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
   }
 }

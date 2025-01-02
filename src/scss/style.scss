@@ -11,10 +11,17 @@
 @import "./ui/button";
 @import "./ui/list";
 @import "./ui/dropdown";
+@import "./ui/title";
+@import "./ui/section-logo";
+
+// widgets
+@import "./widgets/drop-catalog";
 
 // components
 @import "./components/header";
 
 @import "./components/intro";
+@import "./components/articles";
+@import "./components/tasks";
 
 @import "./components/footer";

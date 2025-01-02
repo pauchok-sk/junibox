@@ -4,3 +4,29 @@
     font-size: 32px;
   }
 }
+.title-2 {
+  font-size: 40px;
+  font-weight: 400;
+  @include laptop-min {
+    font-size: 32px;
+  }
+  @include tablet {
+    font-size: 24px;
+    line-height: 140%;
+  }
+
+  span {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 100px;
+    border: 1px solid var(--primary);
+    @include laptop-min {
+      font-size: 16px;
+    }
+    @include tablet {
+      font-size: 13px;
+      line-height: normal;
+    }
+  }
+}

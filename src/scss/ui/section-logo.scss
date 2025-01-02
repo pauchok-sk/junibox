@@ -1,0 +1,11 @@
+.section-logo {
+  display: block;
+  width: 380px;
+  height: auto;
+  margin-bottom: 30px;
+  @include tablet {
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
