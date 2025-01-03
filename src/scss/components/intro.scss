@@ -5,8 +5,6 @@
   z-index: 1;
   @include tablet {
     padding: 335px 0px 50px 0px;
-    background-size: 670px auto !important;
-    background-position: top 30px right 0px !important;
   }
   &__slider-bg {
     position: absolute !important;

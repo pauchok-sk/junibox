@@ -1,0 +1,192 @@
+.footer {
+  padding: 80px 0px 60px 0px;
+  @include tablet {
+    padding-top: 0;
+  }
+  &__nav {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--chalice);
+    margin-bottom: 60px;
+    @include mobile {
+      position: absolute;
+      left: -1000px;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+  &__list {
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: 45px;
+    row-gap: 20px;
+    @include laptop {
+      gap: 30px;
+      row-gap: 20px;
+    }
+
+    a {
+      position: relative;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 160%;
+      color: var(--fuscous);
+      text-transform: uppercase;
+      @include hover {
+        &::before {
+          right: 0;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        right: 100%;
+        height: 1px;
+        background-color: currentColor;
+        transition: right 0.2s ease;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    @include tablet-min {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__info {
+    max-width: 255px;
+    @include tablet-min {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__logo {
+    display: block;
+    width: 160px;
+    margin-bottom: 25px;
+  }
+  &__logo-img {
+    width: 100%;
+  }
+  &__address {
+    font-size: 11px;
+    line-height: 160%;
+    margin: 0px 0px 25px 0px;
+    @include tablet-min {
+      max-width: 180px;
+      br {
+        display: none;
+      }
+    }
+  }
+  &__info-list {
+    margin-bottom: 25px;
+    a {
+      font-size: 11px;
+      line-height: 160%;
+      text-decoration: underline;
+      @include hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__copyright {
+    font-size: 11px;
+    line-height: 160%;
+    margin: 0;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @include tablet-min {
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--chalice);
+    }
+
+    a {
+      position: relative;
+      @include hover {
+        &::before {
+          right: 0;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        right: 100%;
+        height: 1px;
+        background-color: currentColor;
+        transition: right 0.2s ease;
+      }
+    }
+  }
+  &__contacts-btn {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__mail {
+    width: fit-content;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 160%;
+    margin-bottom: 4px;
+  }
+  &__tel {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 160%;
+    width: fit-content;
+    margin-bottom: 4px;
+  }
+  &__graphic {
+    font-size: 12px;
+    line-height: 160%;
+    color: var(--fuscous);
+  }
+  &__social {
+    margin-top: 45px;
+    display: flex;
+    gap: 30px;
+    @include tablet {
+      margin-top: 35px;
+    }
+  }
+  &__social-btn {
+    @include flex-center;
+    width: 25px;
+    height: 25px;
+    opacity: 0.5;
+    color: var(--main);
+    transition: opacity .2s ease;
+    &::before {
+      display: none;
+    }
+    @include hover {
+      opacity: 1;
+    }
+  }
+  &__social-icon {
+    width: 20px;
+    height: 20px;
+  }
+}

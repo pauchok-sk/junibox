@@ -4,8 +4,10 @@ import "../scss/style.scss";
 import spoller from "./files/spoller.js";
 import slider from "./files/sliders.js";
 import dropCatalog from "./files/dropCatalog.js";
+import fancy from "./files/fancy.js";
 
 functions.mediaAdaptive();
 spoller();
 slider();
 dropCatalog();
+fancy();
