@@ -9,6 +9,7 @@
 
 .btn {
   @include flex-center;
+  gap: 10px;
   position: relative;
   cursor: pointer;
   border: none;
@@ -23,7 +24,7 @@
 
   font-size: 12px;
   font-weight: 700;
-  color: white;
+  color: var(--storm);
   z-index: 1;
   transition: box-shadow 0.2s ease;
   @include hover {
@@ -61,6 +62,13 @@
     opacity: 0;
   }
 
+  &._big {
+    min-height: 75px;
+    .btn__icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
   &._gray {
     box-shadow: 0px 20px 20px -20px rgba(84, 81, 79, 0.54);
     &::before {
@@ -97,4 +105,28 @@
     width: 25px;
     height: 25px;
   }
+  &__content {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: 0.24px;
+  }
+}
+
+.btn-video {
+  @include flex-center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: rgba(238, 237, 235, 0.80);
+  color: var(--primary);
+  transition: transform .2s ease;
+  @include hover {
+    transform: scale(1.07);
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
+  } 
 }

@@ -42,10 +42,10 @@ export default function slider() {
         },
       },
       on: {
-        slideChange: ({activeIndex}) => {
+        slideChange: ({ activeIndex }) => {
           sliderBg.slideTo(activeIndex);
-        }
-      }
+        },
+      },
     });
   }
 
@@ -60,6 +60,27 @@ export default function slider() {
       grabCursor: true,
       autoplay: {
         delay: 3000,
+      },
+    });
+  }
+
+  const topSlider = document.querySelector(".top__slider");
+
+  if (topSlider) {
+    const slider = new Swiper(topSlider, {
+      speed: 700,
+      modules: [Autoplay],
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      grabCursor: true,
+      autoplay: {
+        delay: 3000,
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
       },
     });
   }

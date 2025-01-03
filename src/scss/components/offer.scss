@@ -1,0 +1,95 @@
+.offer {
+  padding-bottom: 100px;
+  @include tablet {
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0px;
+    margin-bottom: 70px;
+    border-radius: 50px;
+    background-color: var(--silver);
+    z-index: 1;
+    margin-bottom: 65px;
+  }
+  &__body {
+    position: relative;
+    overflow: hidden;
+    padding: 70px 90px;
+    border-radius: 50px;
+    background-color: var(--silver);
+    z-index: 1;
+    @include laptop {
+      padding: 50px;
+    }
+    @include tablet {
+      position: static;
+      padding: 0;
+      overflow: visible;
+      background-color: transparent;
+    }
+  }
+  &__logo {
+    margin: 0px 0px 30px 0px !important;
+  }
+  &__title {
+    max-width: 630px;
+    margin: 0px 0px 80px 0px;
+    @include laptop-min {
+      max-width: 450px;
+    }
+    @include tablet {
+      max-width: 340px;
+      margin-bottom: 50px;
+      br {
+        display: none;
+      }
+    }
+  }
+  &__info {
+  }
+  &__info-title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 140%;
+    color: var(--primary);
+    max-width: 310px;
+    margin: 0px 0px 30px 0px;
+  }
+  &__info-content {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+    max-width: 435px;
+    margin: 0px 0px 30px 0px;
+    @include tablet {
+      margin-bottom: 170px;
+    }
+    @include mobile {
+      max-width: 260px;
+    }
+  }
+  &__btn {
+  }
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 940px;
+    max-width: none;
+    height: auto;
+    z-index: -1;
+    @include laptop {
+      width: 600px;
+    }
+    @include laptop-min {
+      right: -60px;
+      width: 420px;
+    }
+    @include tablet {
+      width: 405px;
+    }
+    @include mobile {
+      width: 590px;
+      right: -115px;
+    }
+  }
+}
