@@ -6,6 +6,7 @@
 @import "./base/media";
 @import "./base/body-config";
 @import "./base/config-container";
+@import "./base/animation";
 
 // ui
 @import "./ui/button";
@@ -16,6 +17,7 @@
 
 // widgets
 @import "./widgets/drop-catalog";
+@import "./widgets/sections";
 
 // components
 @import "./components/header";
@@ -26,5 +28,7 @@
 @import "./components/offer";
 @import "./components/top";
 @import "./components/video-sect";
+@import "./components/intro-about";
+@import "./components/advantages";
 
 @import "./components/footer";

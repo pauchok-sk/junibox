@@ -37,9 +37,9 @@
   </div>
   <div class="container">
     <nav class="header__main">
-      <ul class="list header__menu-main">
-        <li class="_mobile">
-          <a href="#" class="header__menu-btn">
+      <ul class="list header__mobile-menu">
+        <li>
+          <a href="#" class="header__mobile-btn">
             <svg class="header__menu-icon">
               <use xlink:href="img/icons/icons.svg#icon-home"></use>
             </svg>
@@ -47,24 +47,23 @@
           </a>
         </li>
         <li>
-          <button id="catalog-btn" class="btn-clear header__menu-btn">
+          <a href="#" class="header__mobile-btn">
             <svg class="header__menu-icon">
               <use xlink:href="img/icons/icons.svg#icon-catalog"></use>
             </svg>
-            <div class="header__menu-title">Каталог товаров</div>
             <span class="header__mobile-title">Каталог</span>
-          </button>
+          </a>
         </li>
-        <li class="_mobile">
-          <a href="#" class="header__menu-btn">
+        <li>
+          <a href="#" class="header__mobile-btn">
             <svg class="header__menu-icon">
               <use xlink:href="img/icons/icons.svg#icon-selection"></use>
             </svg>
             <span class="header__mobile-title">Подбор</span>
           </a>
         </li>
-        <li class="_mobile">
-          <a href="#" class="header__menu-btn">
+        <li>
+          <a href="#" class="header__mobile-btn">
             <svg class="header__menu-icon">
               <use xlink:href="img/icons/icons.svg#icon-lines"></use>
             </svg>
@@ -72,15 +71,22 @@
             <span class="header__mobile-title">Сравнение</span>
           </a>
         </li>
-        <li class="_mobile">
-          <a href="#" class="header__menu-btn">
+        <li>
+          <button class="btn-clear header__mobile-btn" id="sections-open">
             <svg class="header__menu-icon">
               <use xlink:href="img/icons/icons.svg#icon-points"></use>
             </svg>
             <span class="header__mobile-title">ещё</span>
-          </a>
+          </button>
         </li>
       </ul>
+      <button id="catalog-btn" class="btn-clear header__catalog-btn">
+        <svg class="header__menu-icon">
+          <use xlink:href="img/icons/icons.svg#icon-catalog"></use>
+        </svg>
+        <div class="header__menu-title">Каталог товаров</div>
+        <span class="header__mobile-title">Каталог</span>
+      </button>
       <ul class="list header__list">
         <li>
           <a href="#">Подбор</a>
@@ -95,22 +101,20 @@
               <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
             </svg>
           </a>
-          <div class="dropdown__item">
-            
-          </div>
+          <div class="dropdown__item"></div>
         </li>
         <li>
           <a href="#">О Junibox</a>
         </li>
       </ul>
-			<a href="#" class="header__clients">
-				<span>Корпоративным клиентам</span>
-				<div class="header__clients-wrapper">
-					<svg class="header__clients-arrow">
-						<use xlink:href='img/icons/icons.svg#icon-arrows'></use>
-					</svg>
-				</div>
-			</a>
+      <a href="#" class="header__clients">
+        <span>Корпоративным клиентам</span>
+        <div class="header__clients-wrapper">
+          <svg class="header__clients-arrow">
+            <use xlink:href="img/icons/icons.svg#icon-arrows"></use>
+          </svg>
+        </div>
+      </a>
     </nav>
   </div>
 </header>

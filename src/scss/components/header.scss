@@ -117,57 +117,33 @@
       overflow: hidden;
     }
   }
-  &__menu-main {
-    border-right: 1px solid var(--bg);
+  &__mobile-menu {
+    display: none;
     @include laptop-min {
       @include flex-center;
       gap: 3px;
-      border-right: none;
       width: 100%;
     }
-    li {
-      &._mobile {
-        opacity: 0;
-        visibility: hidden;
-        width: 0;
-        height: 0px;
-        overflow: hidden;
-      }
 
-      @include laptop-min {
-        flex: 0 1 70px;
-        &._mobile {
-          opacity: 1;
-          visibility: visible;
-          width: auto;
-          height: auto;
-          overflow: visible;
-        }
-      }
+    li {
+      flex: 0 1 70px;
     }
   }
-  &__menu-btn {
+  &__mobile-btn {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 18px;
-    width: fit-content;
-    padding: 15px 35px;
-    min-height: 65px;
-    border-radius: 100px 0px 0px 100px;
-    transition: background-color 0.2s ease;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    gap: 6px;
+    border-radius: 0px;
+    min-height: 56px;
+    width: 100%;
+    transition: background-color .2s ease;
     @include hover {
-      background-color: rgb(255, 255, 255, 0.9);
-    }
-    @include laptop-min {
-      position: relative;
-      flex-direction: column;
-      text-align: center;
-      justify-content: center;
-      padding: 0;
-      gap: 6px;
-      border-radius: 0px;
-      min-height: 56px;
-      width: 100%;
+      background-color: white;
     }
   }
   &__menu-icon {
@@ -185,6 +161,25 @@
       font-weight: 500;
       letter-spacing: 0.16px;
       text-transform: uppercase;
+    }
+  }
+  &__menu-main {
+    border-right: 1px solid var(--bg);
+  }
+  &__catalog-btn {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: fit-content;
+    padding: 15px 35px;
+    min-height: 65px;
+    border-radius: 100px 0px 0px 100px;
+    transition: background-color 0.2s ease;
+    @include hover {
+      background-color: rgb(255, 255, 255, 0.9);
+    }
+    @include laptop-min {
+      display: none;
     }
   }
   &__menu-title {

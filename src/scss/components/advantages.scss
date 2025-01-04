@@ -1,0 +1,136 @@
+.advantages {
+  padding: 45px 0px 165px 0px;
+  @include tablet {
+    padding-bottom: 50px;
+  }
+  &__head {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 80px;
+    @include tablet {
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+  }
+  &__logo {
+    width: 380px;
+    @include tablet {
+      width: 180px;
+    }
+  }
+  &__tag {
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: 500;
+  }
+  &__body {
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 110px;
+    row-gap: 40px;
+    @include laptop {
+      gap: 40px;
+    }
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    flex: 0 1 calc(50% - 55px);
+  }
+  &__article {
+    &:first-child {
+      grid-area: 1 / 1 / 3 / 7;
+    }
+    &:nth-child(2) {
+      grid-area: 1 / 7 / 4 / 13;
+    }
+    &:nth-child(3) {
+      grid-area: 3 / 1 / 5 / 7;
+    }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: 0px 20px 40px -30px rgba(147, 138, 133, 0.5);
+    max-height: 680px;
+    object-fit: cover;
+    margin-bottom: 40px;
+    @include laptop-middle {
+      max-height: 500px;
+    }
+  }
+  &__title {
+    font-size: 16px;
+    margin: 0px 0px 15px 0px;
+  }
+  &__contnet {
+    font-size: 14px;
+    line-height: 160%;
+    margin: 0;
+
+    a {
+      font-weight: 700;
+      text-decoration: underline;
+      @include hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+  &__arrow {
+    display: block;
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    animation: transX 2.3s infinite ease-in-out;
+    @include laptop-middle {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  &__arrow-icon {
+    width: 100%;
+    height: 100%;
+  }
+  &__windows {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    padding: 28px 52px;
+    border-radius: 50px;
+    border: 1px solid var(--primary);
+    grid-area: 4 / 7 / 5 / 13;
+    @include laptop-middle {
+      flex-direction: column;
+      padding: 20px 30px;
+    }
+  }
+  &__windows-icon {
+    width: 120px;
+  }
+  &__windows-title {
+    font-size: 16px;
+    margin: 0px 0px 25px 0px;
+  }
+  &__windows-content {
+    margin: 0;
+    font-size: 14px;
+    line-height: 160%;
+  }
+}
