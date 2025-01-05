@@ -1,0 +1,155 @@
+.delivery {
+  position: relative;
+  padding-top: 60px;
+  overflow: hidden;
+  z-index: 1;
+  @include tablet {
+    padding: 50px 0px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+  }
+  &::before {
+    background: url("@img/guide.png") top 0 right -255px / 960px auto no-repeat;
+    z-index: -1;
+
+    @include laptop-middle {
+      background-position: top 155px right -360px;
+      background-size: 825px auto;
+    }
+    @include laptop-min {
+      background: url("@img/guide-opacity.png") top -160px right -520px / 810px
+        auto no-repeat;
+    }
+  }
+  &::after {
+    background: url("@img/guide-opacity.png") top 200px right -90px / 810px auto
+      no-repeat;
+    z-index: -2;
+    @include laptop-min {
+      background-size: 810px auto;
+      background-position: left -650px bottom -170px;
+    }
+  }
+  &__title {
+    position: relative;
+    margin: 0px 0px 12px 0px;
+    z-index: 1;
+    @include tablet {
+      text-align: center;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 205px;
+      height: 110px;
+      bottom: -10px;
+      left: 155px;
+      background: url("@img/marker.png") 0 0 / 100% auto no-repeat;
+      z-index: -1;
+      @include tablet {
+        width: 190px;
+        height: 95px;
+        left: calc(50% - 65px);
+      }
+    }
+  }
+  &__content {
+    font-size: 20px;
+    margin: 0;
+    @include laptop-min {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px;
+    max-width: 725px;
+    margin-top: 90px;
+    @include tablet {
+      margin-top: 110px;
+    }
+  }
+  &__item {
+    flex: 0 1 calc(50% - 32px);
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex-basis: 100%;
+    }
+  }
+  &__item-logo {
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__item-title {
+    font-size: 16px;
+    line-height: 120%;
+    margin: 0px 0px 20px 0px;
+    @include tablet {
+      margin-bottom: 15px;
+      max-width: 255px;
+    }
+  }
+  &__item-content {
+    font-size: 14px;
+    line-height: 160%;
+    max-width: 320px;
+    margin: 0;
+
+    a {
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: underline;
+      @include hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__item-primary {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 315px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    width: fit-content;
+    margin-top: 40px;
+    border: 1px solid var(--primary);
+    @include tablet {
+
+    }
+  }
+  &__primary-icon {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    color: var(--primary);
+  }
+  &__primary-title {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 120%;
+    margin: 0px 0px 5px 0px;
+  }
+  &__primary-content {
+    font-size: 14px;
+    line-height: 120%;
+    margin: 0;
+  }
+}

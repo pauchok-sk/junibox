@@ -1,0 +1,104 @@
+.models-rec {
+  padding: 65px 0px;
+  overflow: hidden;
+  @include desktop {
+    background-position: bottom 0 right 0 !important;
+    background-size: 900px auto !important;
+  }
+  @include laptop-min {
+    background-size: 600px auto !important;
+  }
+  @include tablet {
+    background: none !important;
+    padding: 50px 0px;
+  }
+  &__logo {
+    width: 380px;
+    margin-bottom: 30px;
+    @include tablet {
+      width: 180px;
+      margin-bottom: 20px;
+    }
+  }
+  &__title {
+    max-width: 665px;
+    margin: 0px 0px 70px 0px;
+    @include tablet {
+      margin-bottom: 25px;
+    }
+  }
+  &__img-mobile {
+    display: none;
+    @include tablet {
+      display: block;
+      width: calc(100% + 40px);
+      max-width: none;
+      transform: translateX(-20px);
+    }
+  }
+  &__subtitle {
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 400;
+    color: var(--primary);
+    max-width: 465px;
+    margin: 0px 0px 20px 0px;
+    @include tablet {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__content {
+    max-width: 435px;
+    font-size: 14px;
+    line-height: 160%;
+    margin: 0px 0px 60px 0px;
+    @include tablet {
+      margin: 0px auto 40px auto;
+      text-align: center;
+    }
+  }
+  &__btn {
+    padding: 18px 40px !important;
+    gap: 20px;
+    @include tablet {
+      padding: 20px 30px !important;
+      margin: 0 auto;
+      gap: 15px;
+    }
+    .btn__icon {
+      width: 30px !important;
+      height: 30px !important;
+      @include tablet {
+        width: 25px !important;
+        height: 25px !important;
+      }
+    }
+  }
+  &__btn-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 160%;
+    letter-spacing: 0.32px;
+    margin: 0px 0px 10px 0px;
+    @include tablet {
+      font-size: 14px;
+      letter-spacing: 0.28px;
+      margin-bottom: 0;
+    }
+  }
+  &__btn-content {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: 0.24px;
+    max-width: 310px;
+    @include tablet {
+      text-align: center;
+      margin: 15px auto 0px auto;
+      letter-spacing: normal;
+    }
+  }
+}

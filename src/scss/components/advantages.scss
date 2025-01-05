@@ -1,5 +1,6 @@
 .advantages {
-  padding: 45px 0px 165px 0px;
+  padding: 45px 0px 100px 0px;
+  overflow: hidden;
   @include tablet {
     padding-bottom: 50px;
   }
@@ -28,23 +29,23 @@
     font-size: 24px;
     font-weight: 500;
   }
-  &__body {
-    display: grid;
-    align-items: start;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(4, auto);
-    gap: 110px;
-    row-gap: 40px;
-    @include laptop {
-      gap: 40px;
+  &__slider {
+    overflow: visible !important;
+    .swiper-wrapper {
+      display: grid;
+      align-items: start;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(4, auto);
+      gap: 110px;
+      row-gap: 40px;
+      @include laptop {
+        gap: 40px;
+      }
+      @include laptop-min {
+        display: flex;
+        gap: 0;
+      }
     }
-  }
-  &__column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 40px;
-    flex: 0 1 calc(50% - 55px);
   }
   &__article {
     &:first-child {
@@ -55,6 +56,12 @@
     }
     &:nth-child(3) {
       grid-area: 3 / 1 / 5 / 7;
+    }
+    @include laptop-min {
+      width: 400px !important;
+    }
+    @include tablet {
+      width: 300px !important;
     }
   }
   &__img {
@@ -68,6 +75,12 @@
     margin-bottom: 40px;
     @include laptop-middle {
       max-height: 500px;
+    }
+    @include laptop-min {
+      height: 500px;
+    }
+    @include tablet {
+      height: 400px;
     }
   }
   &__title {
@@ -97,10 +110,14 @@
     width: 90px;
     height: 90px;
     flex-shrink: 0;
+    color: var(--chalice);
     animation: transX 2.3s infinite ease-in-out;
     @include laptop-middle {
       width: 60px;
       height: 60px;
+    }
+    @include laptop-min {
+      display: none;
     }
   }
   &__arrow-icon {
@@ -116,21 +133,38 @@
     border-radius: 50px;
     border: 1px solid var(--primary);
     grid-area: 4 / 7 / 5 / 13;
+    box-sizing: border-box;
     @include laptop-middle {
       flex-direction: column;
       padding: 20px 30px;
     }
+    @include laptop-min {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 25px 35px;
+      margin-top: 40px;
+    }
   }
   &__windows-icon {
     width: 120px;
+    @include laptop-min {
+      width: 80px;
+    }
   }
   &__windows-title {
     font-size: 16px;
     margin: 0px 0px 25px 0px;
+    @include laptop-min {
+      max-width: 130px;
+    }
   }
   &__windows-content {
     margin: 0;
     font-size: 14px;
     line-height: 160%;
+    @include laptop-min {
+      width: 100%;
+    }
   }
 }

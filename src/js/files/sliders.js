@@ -84,4 +84,50 @@ export default function slider() {
       },
     });
   }
+
+  const advantagesSlider = document.querySelector(".advantages__slider");
+
+  if (advantagesSlider && window.matchMedia("(max-width:992px)").matches) {
+    const slider = new Swiper(advantagesSlider, {
+      speed: 700,
+      modules: [Autoplay],
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      grabCursor: true,
+      autoplay: {
+        delay: 3000,
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
+  const obviousSlider = document.querySelector(".obvious__slider");
+
+  if (obviousSlider) {
+    const slider = new Swiper(obviousSlider, {
+      speed: 700,
+      modules: [Autoplay],
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      grabCursor: true,
+      autoplay: {
+        delay: 3000,
+      },
+      breakpoints: {
+        993: {
+          spaceBetween: 60,
+          slidesPerView: 2,
+        },
+        744: {
+          spaceBetween: 40,
+          slidesPerView: 2,
+        },
+      },
+    });
+  }
 }

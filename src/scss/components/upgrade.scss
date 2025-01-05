@@ -1,0 +1,63 @@
+.upgrade {
+  padding: 320px 0px 245px 0px;
+  @include laptop {
+    padding: 200px 0px;
+    background-size: 1000px auto !important;
+  }
+  @include laptop-min {
+    background-size: 700px auto !important;
+    background-position: center right 0 !important;
+  }
+  @include tablet {
+    padding: 50px 0px 495px 0px;
+    background-position: right -70px bottom 0 !important;
+    background-size: 755px auto !important;
+  }
+  &__title {
+    font-size: 16px;
+    line-height: 120%;
+    margin: 0px 0px 25px 0px;
+    @include tablet {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+  &__content {
+    font-size: 14px;
+    line-height: 160%;
+    max-width: 310px;
+    margin: 0px 0px 25px 0px;
+    @include tablet {
+      text-align: center;
+      max-width: 260px;
+      margin: 0px auto 25px auto;
+    }
+  }
+  &__primary {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 325px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    border: 1px solid var(--primary);
+
+    font-size: 16px;
+    font-weight: 700;
+    @include tablet {
+      padding: 15px 30px;
+      font-size: 14px;
+      margin: 0 auto;
+      max-width: 270px;
+    }
+  }
+  &__primary-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--primary);
+    @include tablet {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
