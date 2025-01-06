@@ -1,7 +1,7 @@
 .models-rec {
   padding: 65px 0px;
   overflow: hidden;
-  @include desktop {
+  @media (max-width: 1539px) {
     background-position: bottom 0 right 0 !important;
     background-size: 900px auto !important;
   }
