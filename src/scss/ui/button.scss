@@ -13,6 +13,7 @@
   position: relative;
   cursor: pointer;
   border: none;
+  overflow: hidden;
 
   width: fit-content;
   min-height: 55px;
@@ -79,16 +80,29 @@
 
   &._gray {
     box-shadow: 0px 20px 20px -20px rgba(84, 81, 79, 0.54);
+    background-color: transparent;
     &::before {
-      background: linear-gradient(
-        100deg,
-        #b9b8b7 7.8%,
-        #cecece 27.76%,
-        #b9b8b7 46.93%
-      );
+      background: var(--chalice);
     }
     &::after {
-      background: var(--chalice);
+      width: 305px;
+      height: 324px;
+      background: linear-gradient(
+        297deg,
+        rgba(166, 166, 166, 0) 41.03%,
+        #cecece 53.48%,
+        rgba(166, 166, 166, 0) 66.5%
+      );
+      opacity: 1;
+      left: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      animation: animationGlare 2.5s infinite ease-out;
+    }
+    @include hover {
+      &::before {
+        opacity: 1 !important;
+      }
     }
   }
 
@@ -168,8 +182,32 @@
   @include hover {
     transform: scale(1.07);
   }
+
+  &._primary {
+    background-color: var(--primary);
+    color: var(--storm);
+    transition: background-color .2s ease;
+
+    @include hover {
+      background-color: var(--blue);
+      transform: scale(1);
+    }
+  }
+
   &__icon {
     width: 24px;
     height: 24px;
+  }
+}
+
+@keyframes animationGlare {
+  0% {
+    right: 100%;
+  }
+  50% {
+    right: 100%;
+  }
+  100% {
+    right: -120%;
   }
 }

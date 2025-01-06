@@ -130,4 +130,18 @@ export default function slider() {
       },
     });
   }
+  const choiceSlider = document.querySelector(".choice__slider");
+
+  if (choiceSlider && window.matchMedia("(max-width:992px)").matches) {
+    const slider = new Swiper(choiceSlider, {
+      speed: 700,
+      modules: [Autoplay],
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      grabCursor: true,
+      autoplay: {
+        delay: 3000,
+      },
+    });
+  }
 }

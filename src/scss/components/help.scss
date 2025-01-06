@@ -1,0 +1,166 @@
+.help {
+  position: relative;
+  overflow: hidden;
+  padding-top: 385px;
+  z-index: 1;
+  @include tablet {
+    padding-top: 295px;
+  }
+  &__tel-opacity {
+    position: absolute;
+    width: 430px;
+    top: 20px;
+    left: 315px;
+    z-index: -1;
+    @include laptop {
+      left: -155px;
+    }
+    @include tablet {
+      top: 0;
+      width: 215px;
+      left: -75px;
+    }
+  }
+  &__tel {
+    position: absolute;
+    top: 20px;
+    right: -210px;
+    width: 750px;
+    max-width: none;
+    z-index: -1;
+    @include laptop {
+      width: 580px;
+    }
+    @include tablet {
+      width: 405px;
+      right: -250px;
+      top: 75px;
+    }
+  }
+  &__item-wrapper {
+    position: relative;
+    width: 100%;
+    @include laptop {
+      position: static;
+    }
+  }
+  &__item {
+    position: relative;
+    max-width: 630px;
+    width: 100%;
+    margin-left: auto;
+
+    @include laptop-min {
+      margin-left: 0;
+    }
+
+    &._heart {
+      margin-bottom: 240px;
+      @include laptop-min {
+        margin-bottom: 80px;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 120px;
+        height: 120px;
+        left: -80px;
+        top: -80px;
+        background: url("@img/heart.svg") 0 0 / 100% auto no-repeat;
+
+        @include laptop-min {
+          left: 55px;
+          transform: scale(-1, 1);
+        }
+      }
+    }
+    &:last-child {
+      padding-bottom: 80px;
+      @include tablet {
+        padding-bottom: 100px;
+      }
+    }
+  }
+  &__subtitle {
+    font-size: 24px;
+    margin: 0px 0px 10px 0px;
+  }
+  &__title {
+    margin: 0px 0px 40px 0px;
+    @include tablet {
+      font-size: 32px;
+    }
+  }
+  &__top-content {
+    font-size: 14px;
+    line-height: 160%;
+    max-width: 310px;
+    margin: 0px 0px 40px 0px;
+  }
+  &__social {
+    display: flex;
+    gap: 15px;
+  }
+  &__social-btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease;
+    @include hover {
+      transform: scale(1.08);
+    }
+    @include tablet {
+      width: 55px;
+      height: 55px;
+    }
+  }
+  &__social-icon {
+    width: 100%;
+  }
+  &__item-marks {
+    width: 84px;
+    margin-bottom: 52px;
+  }
+  &__bottom-content {
+    font-size: 24px;
+    margin: 0px 0px 52px 0px;
+    span {
+      font-weight: 500;
+      color: var(--primary);
+    }
+    @include tablet {
+      max-width: 270px;
+    }
+  }
+  &__subcontent {
+    font-size: 20px;
+    line-height: 140%;
+    margin: 0;
+    @include tablet {
+      font-size: 14px;
+    }
+    @include tablet-min {
+      max-width: 185px;
+    }
+  }
+  &__operator {
+    position: absolute;
+    left: 100px;
+    max-width: none;
+    bottom: 0;
+    width: 500px;
+    z-index: -1;
+    @include laptop {
+      left: -150px;
+    }
+    @include laptop-min {
+      width: 370px;
+      right: -164px;
+      left: auto;
+    }
+    @media (max-width: 399px) {
+      right: -180px;
+    }
+  }
+}

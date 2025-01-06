@@ -30,6 +30,11 @@
       display: none;
     }
   }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
   &__wrapper {
     display: flex;
     align-items: flex-end;

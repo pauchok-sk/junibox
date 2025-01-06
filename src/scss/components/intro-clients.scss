@@ -1,0 +1,31 @@
+.intro-clients {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 180px;
+  min-height: 100vh;
+  @include tablet {
+    padding-top: 0;
+  }
+
+  .video-sect__video {
+    @include tablet {
+      height: 400px;
+      border-radius: 0px 0px 50px 50px;
+      left: -20px;
+      width: 100vw;
+    }
+  }
+  .video-sect__wrapper {
+    @include tablet {
+      flex-direction: column-reverse;
+      padding-top: 235px;
+
+      &::before {
+        height: 400px;
+        border-radius: 0px 0px 50px 50px;
+        left: -20px;
+        right: -20px;
+      }
+    }
+  }
+}
