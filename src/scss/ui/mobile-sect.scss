@@ -1,0 +1,26 @@
+.mobile-sect {
+  section {
+    &:nth-child(2) {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      left: -10000px;
+      z-index: -100;
+    }
+
+    @include tablet {
+      &:nth-child(1) {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        left: -10000px;
+      }
+      &:nth-child(2) {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+      }
+    }
+  }
+}

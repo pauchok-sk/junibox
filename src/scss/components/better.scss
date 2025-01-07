@@ -40,6 +40,9 @@
           border-radius: 50px 0px 0px 50px;
           transform: translateX(20px);
         }
+        .better__item-info {
+          margin-left: auto;
+        }
       }
     }
   }
@@ -61,6 +64,9 @@
       height: 400px;
       margin: 40px 0px 0px 0px;
     }
+  }
+  &__item-info {
+    width: fit-content;
   }
   &__item-title {
     font-size: 16px;

@@ -144,4 +144,24 @@ export default function slider() {
       },
     });
   }
+
+  const volumesSlider = document.querySelector(".volumes__slider");
+
+  if (volumesSlider) {
+    const slider = new Swiper(volumesSlider, {
+      speed: 700,
+      modules: [Autoplay],
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      grabCursor: true,
+      autoplay: {
+        delay: 3500,
+      },
+      breakpoints: {
+        993: {
+          spaceBetween: 40
+        }
+      }
+    });
+  }
 }
