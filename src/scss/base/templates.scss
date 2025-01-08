@@ -21,3 +21,14 @@
     }
   }
 }
+
+@mixin hidden {
+  position: absolute;
+  left: -1000px;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}

@@ -1,0 +1,92 @@
+.selection {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0px;
+  z-index: 1;
+  @include tablet {
+    padding: 50px 0px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: linear-gradient(
+      263deg,
+      rgba(238, 237, 235, 0) 35.51%,
+      #eeedeb 102.96%
+    );
+    z-index: -1;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include mobile {
+      width: auto;
+      height: auto;
+      width: 743px;
+      left: -140px;
+
+      img {
+        height: auto;
+      }
+    }
+  }
+  &__content {
+    margin: 0px 0px 35px 0px;
+    font-size: 16px;
+    @include tablet {
+      text-align: center;
+      max-width: 265px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__title {
+    max-width: 335px;
+    margin: 0px 0px 35px 0px;
+    @include tablet {
+      text-align: center;
+      max-width: 260px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a {
+      position: relative;
+      color: var(--primary);
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      @include hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__btn {
+    padding-left: 30px;
+    padding-right: 30px;
+    @include tablet {
+      margin: 0 auto;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

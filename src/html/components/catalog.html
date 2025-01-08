@@ -1,0 +1,388 @@
+<section class="catalog">
+  <div class="container">
+    <div class="catalog__head">
+      <p class="catalog__head-content">
+        У Junibox море преимуществ, <br />
+        но помимо этого:
+      </p>
+      <ul class="list catalog__head-list">
+        <li class="catalog__head-item">
+          <h6 class="catalog__head-item-title">Топ-сборка</h6>
+          <p class="catalog__head-item-content">
+            устройства служат долго верой и правдой
+          </p>
+        </li>
+        <li class="catalog__head-item">
+          <h6 class="catalog__head-item-title">30 дней</h6>
+          <p class="catalog__head-item-content">
+            увеличенный срок возврата без объяснения причин
+          </p>
+        </li>
+        <li class="catalog__head-item">
+          <h6 class="catalog__head-item-title">За 5 минут</h6>
+          <p class="catalog__head-item-content">
+            запуск без установки <br />
+            и знаний
+          </p>
+        </li>
+      </ul>
+      <a href="#" class="catalog__head-rect">
+        <svg class="catalog__head-icon">
+          <use xlink:href="img/icons/icons.svg#icon-search-heart"></use>
+        </svg>
+        <span>Смотреть больше преимуществ</span>
+      </a>
+    </div>
+    <button class="btn-clear catalog__fitlers-btn" id="filters-btn">
+      <span>Фильтры</span>
+      <svg class="catalog__filters-icon">
+        <use xlink:href="img/icons/icons.svg#icon-filters"></use>
+      </svg>
+    </button>
+    <div class="catalog__wrapper">
+      <aside class="catalog__filters" id="filters">
+        <button class="btn-clear catalog__filters-close" id="filters-close">
+          <svg class="catalog__filters-close-icon">
+            <use xlink:href="img/icons/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="catalog__filters-head">
+          <p class="catalog__filters-content">
+            Не разбираетесь <br />
+            в характеристиках?
+          </p>
+          <a href="#" class="btn-r _gray">Подберите под задачу</a>
+        </div>
+        <form action="#" class="catalog__filters-form">
+          <div class="catalog__fitlers-item">
+            <h5 class="catalog__filters-title">Количество ядер</h5>
+            <div class="catalog__filters-buttons">
+              <input
+                type="checkbox"
+                id="cores-all"
+                checked
+                class="catalog__input-check"
+              />
+              <label for="cores-all" class="catalog__label-check">Все</label>
+              <input
+                type="checkbox"
+                id="cores-4"
+                class="catalog__input-check"
+              />
+              <label for="cores-4" class="catalog__label-check">4</label>
+              <input
+                type="checkbox"
+                id="cores-6"
+                class="catalog__input-check"
+              />
+              <label for="cores-6" class="catalog__label-check">6</label>
+              <input
+                type="checkbox"
+                id="cores-8"
+                class="catalog__input-check"
+              />
+              <label for="cores-8" class="catalog__label-check">8</label>
+              <input
+                type="checkbox"
+                id="cores-12"
+                class="catalog__input-check"
+              />
+              <label for="cores-12" class="catalog__label-check">12</label>
+            </div>
+          </div>
+          <div class="catalog__fitlers-item">
+            <h5 class="catalog__filters-title">Оперативная память, Гб</h5>
+            <div class="catalog__filters-buttons">
+              <input
+                type="checkbox"
+                id="ram-all"
+                checked
+                class="catalog__input-check"
+              />
+              <label for="ram-all" class="catalog__label-check">Все</label>
+              <input type="checkbox" id="ram-2" class="catalog__input-check" />
+              <label for="ram-2" class="catalog__label-check">8</label>
+              <input type="checkbox" id="ram-3" class="catalog__input-check" />
+              <label for="ram-3" class="catalog__label-check">16</label>
+              <input type="checkbox" id="ram-43" class="catalog__input-check" />
+              <label for="ram-43" class="catalog__label-check">32</label>
+            </div>
+          </div>
+          <div class="catalog__fitlers-item">
+            <h5 class="catalog__filters-title">Процессор</h5>
+            <div class="catalog__filters-buttons">
+              <input
+                type="checkbox"
+                id="core-all"
+                checked
+                class="catalog__input-check"
+              />
+              <label for="core-all" class="catalog__label-check">Все</label>
+              <input type="checkbox" id="Intel" class="catalog__input-check" />
+              <label for="Intel" class="catalog__label-check">Intel</label>
+              <input type="checkbox" id="AMD" class="catalog__input-check" />
+              <label for="AMD" class="catalog__label-check">AMD</label>
+            </div>
+          </div>
+          <div class="catalog__filters-nav">
+            <button class="btn-r _primary catalog__filters-btn">
+              Применить
+            </button>
+            <a href="#" class="btn-r _light catalog__filters-btn">Сбросить</a>
+          </div>
+        </form>
+      </aside>
+      <div class="catalog__main parent-more">
+        <div class="catalog__main-head">
+          <img
+            src="@img/circle-arrow.svg"
+            alt="icon"
+            class="catalog__main-icon"
+          />
+          <p class="catalog__main-content">
+            У нас всего около десятка моделей с разными конфигурациями. Каждая
+            модель оптимальна под свои задачи, но если удобно — выбирайте по
+            конкретным параметрам
+          </p>
+        </div>
+        <div data-more="4" data-more-media="630" data-more-step="2" class="catalog__products">
+          <a href="#" class="catalog__product">
+            <div class="catalog__product-head">
+              <span class="catalog__product-tag">Хит продаж!</span>
+              <div class="catalog__product-compare">
+                <span>Сравнить</span>
+                <button class="btn-clear catalog__product-compare-btn">
+                  <svg class="catalog__compare-icon">
+                    <use xlink:href="img/icons/icons.svg#icon-chart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <h5 class="catalog__product-title">Модель X4D</h5>
+            <ul class="list catalog__product-list">
+              <li>RAM: 16GB</li>
+              <li>SSD: 512GB</li>
+            </ul>
+            <div class="catalog__product-price">
+              <span class="catalog__product-price-content"
+                >Купить <br />
+                на Озон</span
+              >
+              <span class="catalog__product-price-primary">17 040 р.</span>
+            </div>
+            <img src="@img/product.jpg" alt="" class="catalog__product-img" />
+          </a>
+          <a href="#" class="catalog__product">
+            <div class="catalog__product-head">
+              <span class="catalog__product-tag">Хит продаж!</span>
+              <div class="catalog__product-compare">
+                <span>Сравнить</span>
+                <button class="btn-clear catalog__product-compare-btn">
+                  <svg class="catalog__compare-icon">
+                    <use xlink:href="img/icons/icons.svg#icon-chart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <h5 class="catalog__product-title">Модель X4D</h5>
+            <ul class="list catalog__product-list">
+              <li>RAM: 16GB</li>
+              <li>SSD: 512GB</li>
+            </ul>
+            <div class="catalog__product-price">
+              <span class="catalog__product-price-content"
+                >Купить <br />
+                на Озон</span
+              >
+              <span class="catalog__product-price-primary">17 040 р.</span>
+            </div>
+            <img src="@img/product-2.jpg" alt="" class="catalog__product-img" />
+          </a>
+          <a href="#" class="catalog__product">
+            <div class="catalog__product-head">
+              <span class="catalog__product-tag">Хит продаж!</span>
+              <div class="catalog__product-compare">
+                <span>Сравнить</span>
+                <button class="btn-clear catalog__product-compare-btn">
+                  <svg class="catalog__compare-icon">
+                    <use xlink:href="img/icons/icons.svg#icon-chart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <h5 class="catalog__product-title">Модель X4D</h5>
+            <ul class="list catalog__product-list">
+              <li>RAM: 16GB</li>
+              <li>SSD: 512GB</li>
+            </ul>
+            <div class="catalog__product-price">
+              <span class="catalog__product-price-content"
+                >Купить <br />
+                на Озон</span
+              >
+              <span class="catalog__product-price-primary">17 040 р.</span>
+            </div>
+            <img src="@img/product.jpg" alt="" class="catalog__product-img" />
+          </a>
+          <a href="#" class="catalog__product">
+            <div class="catalog__product-head">
+              <span class="catalog__product-tag">Хит продаж!</span>
+              <div class="catalog__product-compare">
+                <span>Сравнить</span>
+                <button class="btn-clear catalog__product-compare-btn">
+                  <svg class="catalog__compare-icon">
+                    <use xlink:href="img/icons/icons.svg#icon-chart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <h5 class="catalog__product-title">Модель X4D</h5>
+            <ul class="list catalog__product-list">
+              <li>RAM: 16GB</li>
+              <li>SSD: 512GB</li>
+            </ul>
+            <div class="catalog__product-price">
+              <span class="catalog__product-price-content"
+                >Купить <br />
+                на Озон</span
+              >
+              <span class="catalog__product-price-primary">17 040 р.</span>
+            </div>
+            <img src="@img/product.jpg" alt="" class="catalog__product-img" />
+          </a>
+          <a href="#" class="catalog__product">
+            <div class="catalog__product-head">
+              <span class="catalog__product-tag">Хит продаж!</span>
+              <div class="catalog__product-compare">
+                <span>Сравнить</span>
+                <button class="btn-clear catalog__product-compare-btn">
+                  <svg class="catalog__compare-icon">
+                    <use xlink:href="img/icons/icons.svg#icon-chart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <h5 class="catalog__product-title">Модель X4D</h5>
+            <ul class="list catalog__product-list">
+              <li>RAM: 16GB</li>
+              <li>SSD: 512GB</li>
+            </ul>
+            <div class="catalog__product-price">
+              <span class="catalog__product-price-content"
+                >Купить <br />
+                на Озон</span
+              >
+              <span class="catalog__product-price-primary">17 040 р.</span>
+            </div>
+            <img src="@img/product.jpg" alt="" class="catalog__product-img" />
+          </a>
+          <a href="#" class="catalog__product">
+            <div class="catalog__product-head">
+              <span class="catalog__product-tag">Хит продаж!</span>
+              <div class="catalog__product-compare">
+                <span>Сравнить</span>
+                <button class="btn-clear catalog__product-compare-btn">
+                  <svg class="catalog__compare-icon">
+                    <use xlink:href="img/icons/icons.svg#icon-chart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <h5 class="catalog__product-title">Модель X4D</h5>
+            <ul class="list catalog__product-list">
+              <li>RAM: 16GB</li>
+              <li>SSD: 512GB</li>
+            </ul>
+            <div class="catalog__product-price">
+              <span class="catalog__product-price-content"
+                >Купить <br />
+                на Озон</span
+              >
+              <span class="catalog__product-price-primary">17 040 р.</span>
+            </div>
+            <img src="@img/product-2.jpg" alt="" class="catalog__product-img" />
+          </a>
+          <a href="#" class="catalog__product">
+            <div class="catalog__product-head">
+              <span class="catalog__product-tag">Хит продаж!</span>
+              <div class="catalog__product-compare">
+                <span>Сравнить</span>
+                <button class="btn-clear catalog__product-compare-btn">
+                  <svg class="catalog__compare-icon">
+                    <use xlink:href="img/icons/icons.svg#icon-chart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <h5 class="catalog__product-title">Модель X4D</h5>
+            <ul class="list catalog__product-list">
+              <li>RAM: 16GB</li>
+              <li>SSD: 512GB</li>
+            </ul>
+            <div class="catalog__product-price">
+              <span class="catalog__product-price-content"
+                >Купить <br />
+                на Озон</span
+              >
+              <span class="catalog__product-price-primary">17 040 р.</span>
+            </div>
+            <img src="@img/product.jpg" alt="" class="catalog__product-img" />
+          </a>
+          <a href="#" class="catalog__product">
+            <div class="catalog__product-head">
+              <span class="catalog__product-tag">Хит продаж!</span>
+              <div class="catalog__product-compare">
+                <span>Сравнить</span>
+                <button class="btn-clear catalog__product-compare-btn">
+                  <svg class="catalog__compare-icon">
+                    <use xlink:href="img/icons/icons.svg#icon-chart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <h5 class="catalog__product-title">Модель X4D</h5>
+            <ul class="list catalog__product-list">
+              <li>RAM: 16GB</li>
+              <li>SSD: 512GB</li>
+            </ul>
+            <div class="catalog__product-price">
+              <span class="catalog__product-price-content"
+                >Купить <br />
+                на Озон</span
+              >
+              <span class="catalog__product-price-primary">17 040 р.</span>
+            </div>
+            <img src="@img/product.jpg" alt="" class="catalog__product-img" />
+          </a>
+          <a href="#" class="catalog__product">
+            <div class="catalog__product-head">
+              <span class="catalog__product-tag">Хит продаж!</span>
+              <div class="catalog__product-compare">
+                <span>Сравнить</span>
+                <button class="btn-clear catalog__product-compare-btn">
+                  <svg class="catalog__compare-icon">
+                    <use xlink:href="img/icons/icons.svg#icon-chart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <h5 class="catalog__product-title">Модель X4D</h5>
+            <ul class="list catalog__product-list">
+              <li>RAM: 16GB</li>
+              <li>SSD: 512GB</li>
+            </ul>
+            <div class="catalog__product-price">
+              <span class="catalog__product-price-content"
+                >Купить <br />
+                на Озон</span
+              >
+              <span class="catalog__product-price-primary">17 040 р.</span>
+            </div>
+            <img src="@img/product.jpg" alt="" class="catalog__product-img" />
+          </a>
+        </div>
+        <button data-more-btn class="btn-clear catalog__btn-more">Показать еще</button>
+      </div>
+    </div>
+  </div>
+</section>
