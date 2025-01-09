@@ -164,4 +164,24 @@ export default function slider() {
       }
     });
   }
+
+  const modelsSlider = document.querySelector(".models__slider");
+
+  if (modelsSlider && window.matchMedia("(max-width:992px)").matches) {
+    const slider = new Swiper(modelsSlider, {
+      speed: 700,
+      modules: [Autoplay],
+      slidesPerView: "auto",
+      spaceBetween: 12,
+      grabCursor: true,
+      autoplay: {
+        delay: 3500,
+      },
+      breakpoints: {
+        744: {
+          spaceBetween: 20
+        }
+      }
+    });
+  }
 }

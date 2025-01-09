@@ -1,0 +1,116 @@
+.models {
+  &__head {
+    @include flex-between;
+    gap: 30px;
+    margin-bottom: 45px;
+    @include tablet {
+      @include hidden;
+    }
+  }
+  &__title {
+    margin: 0;
+  }
+  &__head-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__head-content {
+    text-align: right;
+    max-width: 90px;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0.24px;
+  }
+  &__btn {
+    gap: 15px;
+    margin: 0;
+    .btn__icon {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  &__body {
+    overflow: hidden;
+    padding: 65px;
+    border-radius: 50px;
+    background-color: var(--silver);
+    @include laptop {
+      padding: 50px 30px;
+    }
+  }
+  &__slider {
+    overflow: visible !important;
+    .swiper-wrapper {
+      overflow: visible !important;
+      display: grid !important;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 40px;
+      @include laptop {
+        gap: 20px;
+      }
+      @include laptop-min {
+        display: flex !important;
+        align-items: stretch;
+        gap: 0px;
+      }
+    }
+
+    .product {
+      display: flex !important;
+      width: auto !important;
+      box-sizing: border-box;
+      grid-column: 4 span !important;
+      padding: 30px;
+      @include laptop {
+        padding: 20px;
+      }
+      @include laptop-min {
+        width: 300px !important;
+        height: auto;
+      }
+
+      &__link {
+        bottom: 72px;
+      }
+      &__head {
+        margin-bottom: 30px;
+      }
+      &__title {
+        font-size: 24px;
+        margin-bottom: 15px;
+
+      }
+      &__list {
+        padding: 10px 20px;
+        margin-bottom: 250px;
+        @include laptop-min {
+          margin-bottom: 190px;
+        }
+
+        li {
+          font-size: 12px;
+          &::after {
+            height: 12px;
+          }
+        }
+      }
+      &__price {
+        display: flex;
+        align-items: center;
+      }
+      &__price-content {
+        font-size: 14px;
+        padding-left: 20px;
+      }
+      &__price-primary {
+        font-size: 14px;
+        flex-basis: 100px;
+        min-height: 42px;
+      }
+    }
+  }
+}

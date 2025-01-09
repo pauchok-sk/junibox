@@ -85,7 +85,7 @@
   }
   &__fitlers-btn {
     display: none;
-    gap: 10px;
+    gap: 20px;
     max-width: 360px;
     width: 100%;
     margin: 25px auto 25px auto;
@@ -93,10 +93,11 @@
     background-color: var(--alto);
     padding: 15px;
 
-    font-size: 14px;
+    font-size: 13px;
     line-height: 140%;
     @include laptop-middle {
-      @include flex-center;
+      display: flex;
+      align-items: center;
     }
     @include laptop-min {
       margin-top: 0;
@@ -419,7 +420,7 @@
     }
 
     span {
-      display: block;
+      display: flex;
     }
   }
   &__product-price-content {
@@ -427,12 +428,22 @@
     font-weight: 500;
     line-height: 120%;
     padding-left: 15px;
+
+    br {
+      display: none;
+      @media (max-width: 420px) {
+        display: block;
+      }
+    }
   }
   &__product-price-primary {
+    @include flex-center;
     font-size: 12px;
     font-weight: 500;
     line-height: 160%;
-    padding: 10px 15px;
+    padding: 5px;
+    min-height: 40px;
+    flex: 0 1 85px;
     border-radius: 100px;
     text-align: center;
     margin-left: auto;
