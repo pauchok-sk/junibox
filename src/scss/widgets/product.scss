@@ -215,12 +215,20 @@
     align-items: center;
     gap: 10px;
     margin-left: auto;
+    @include tablet {
+      flex-direction: row-reverse;
+      margin: 0;
+    }
   }
   &__compare-current-content {
     font-size: 11px;
     margin: 0;
     max-width: 75px;
     text-align: right;
+    @include tablet {
+      font-size: 10px;
+      text-align: left;
+    }
     a {
       display: block;
       font-weight: 500;
