@@ -10,6 +10,35 @@
       @@include('html/components/intro-category.html')
       @@include('html/components/models.html')
       @@include('html/components/fit.html')
+      @@include('html/components/selection-other.html')
+      @@include('html/components/secret.html')
+      @@include('html/components/perfomance.html')
+      <section class="selection">
+        <picture class="selection__bg">
+          <source srcset="@img/section-mob.png" media="(max-width: 480px)" />
+          <img src="@img/selection.jpg" alt="image" />
+        </picture>
+        <div class="container">
+          <p class="selection__content">Сложно выбрать по характеристикам?</p>
+          <h2 class="title-2-s selection__title">
+            Есть простой
+            <a href="#">онлайн-подбор</a>
+            исходя из задач
+          </h2>
+          <a href="#" class="btn _primary selection__btn _desk">
+            <svg class="btn__icon">
+              <use xlink:href="img/icons/icons.svg#icon-list"></use>
+            </svg>
+            <span>Запустить онлайн-подбор:</span>
+          </a>
+          <a href="#" class="btn _primary selection__btn _mobile _min-btn">
+            <svg class="btn__icon">
+              <use xlink:href="img/icons/icons.svg#icon-list"></use>
+            </svg>
+            <span>Давайте подберем</span>
+          </a>
+        </div>
+      </section>
 
     </main>
     @@include('html/components/footer.html')

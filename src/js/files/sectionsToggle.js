@@ -10,7 +10,7 @@ export default function sectionsToggle() {
     })
 
     function sectionsOpen() {
-      document.body.classList.add("hidden");
+      document.body.classList.add("body-hidden");
       sections.classList.add("_open");
 
       const sectionsBody = sections.querySelector(".sections__body");
@@ -20,7 +20,7 @@ export default function sectionsToggle() {
     }
 
     function sectionsClose() {
-      document.body.classList.remove("hidden");
+      document.body.classList.remove("body-hidden");
       sections.classList.remove("_open");
 
       document.body.removeEventListener("click", sectionsClose);
