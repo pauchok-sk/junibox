@@ -1,0 +1,78 @@
+.offer-simple {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 80px;
+  z-index: 1;
+  @include laptop-min {
+    padding: 50px 0px;
+    border-radius: 50px;
+    background-color: var(--silver);
+  }
+  &__img {
+    position: absolute;
+    width: 1230px;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    @include laptop-middle {
+      width: 1000px;
+      top: 50px;
+    }
+    @include laptop-min {
+      width: 640px;
+      right: 0;
+      top: auto;
+      bottom: -40px;
+    }
+    @include tablet {
+      width: 580px;
+      right: -105px;
+      bottom: 0;
+    }
+    @media (max-width:399px) {
+      width: 515px;
+    }
+    
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__logo {
+    width: 380px;
+    margin-bottom: 30px;
+    @include laptop-min {
+      width: 200px;
+    }
+  }
+  &__title {
+    max-width: 515px;
+    margin: 0px 0px 80px 0px;
+    @include laptop-min {
+      margin-bottom: 50px;
+    }
+    @include tablet {
+      max-width: 295px;
+    }
+  }
+  &__primary-content {
+    font-size: 20px;
+    line-height: 140%;
+    color: var(--primary);
+    max-width: 310px;
+    margin: 0px 0px 30px 0px;
+  }
+  &__content {
+    margin: 0px 0px 30px 0px;
+    font-size: 14px;
+    line-height: 160%;
+    max-width: 435px;
+    @include laptop-min {
+      margin-bottom: 170px;
+    }
+    @include tablet {
+      max-width: 255px;
+    }
+  }
+}
