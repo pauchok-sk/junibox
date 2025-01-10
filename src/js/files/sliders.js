@@ -159,9 +159,9 @@ export default function slider() {
       },
       breakpoints: {
         993: {
-          spaceBetween: 40
-        }
-      }
+          spaceBetween: 40,
+        },
+      },
     });
   }
 
@@ -179,9 +179,35 @@ export default function slider() {
       },
       breakpoints: {
         744: {
-          spaceBetween: 20
-        }
-      }
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
+  const introProductSlider = document.querySelector(".intro-product__slider");
+
+  if (introProductSlider && window.matchMedia("(max-width:743px)").matches) {
+    const slider = new Swiper(introProductSlider, {
+      speed: 700,
+      modules: [Autoplay, Pagination],
+      grabCursor: true,
+      autoplay: {
+        delay: 3500,
+      },
+      pagination: {
+        el: ".intro__slider-numbers",
+        clickable: true,
+        renderBullet: function (index, className) {
+          const currentNumber = index + 1;
+          return `
+            <button class="btn-clear intro__number-btn ${className}">
+              <span>${currentNumber > 9 ? currentNumber : "0" + currentNumber}</span>
+              <div class="intro__number-line"></div>
+            </button>
+          `;
+        },
+      },
     });
   }
 }

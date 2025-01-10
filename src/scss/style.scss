@@ -15,11 +15,13 @@
 @import "./ui/title";
 @import "./ui/section-logo";
 @import "./ui/mobile-sect";
+@import "./ui/modal";
 
 // widgets
 @import "./widgets/drop-catalog";
 @import "./widgets/sections";
 @import "./widgets/product";
+@import "./widgets/modal-buyer";
 
 // components
 @import "./components/header";
@@ -60,5 +62,7 @@
 @import "./components/fit";
 @import "./components/selection-other";
 @import "./components/secret";
+@import "./components/intro-product";
+@import "./components/available";
 
 @import "./components/footer";

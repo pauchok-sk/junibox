@@ -24,6 +24,7 @@
     0px 10px 20px -10px rgba(131, 118, 111, 0.93);
 
   font-size: 12px;
+  text-align: center;
   font-weight: 700;
   color: var(--storm);
   z-index: 1;
@@ -121,6 +122,20 @@
         #518ede 0%,
         #27558f 100%
       );
+    }
+  }
+  &._simple {
+    min-height: 44px;
+    box-shadow: none;
+    padding: 15px 25px;
+    background-color: var(--primary-dark);
+    transition: background-color .2s ease;
+    @include hover {
+      background-color: var(--blue);
+    }
+
+    &::before, &::after {
+      display: none;
     }
   }
 

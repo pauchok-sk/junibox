@@ -1,0 +1,133 @@
+.modal {
+  --bg-overlay: rgba(205, 205, 205, 0.78);
+  --bg-overlay-hide: rgba(205, 205, 205, 0);
+  &._open {
+    .modal__overlay,
+    .modal__window {
+      opacity: 1;
+      z-index: 1000;
+    }
+    .modal__overlay {
+      background-color: var(--bg-overlay);
+      overflow-y: auto;
+    }
+    .modal__window {
+      transform: translateY(0);
+    }
+  }
+  &._hide {
+    .modal__overlay,
+    .modal__window {
+      opacity: 1;
+      z-index: 1000;
+    }
+    .modal__overlay {
+      background-color: var(--bg-overlay-hide);
+    }
+    .modal__window {
+      opacity: 0;
+    }
+  }
+  &__overlay,
+  &__window {
+    opacity: 0;
+    z-index: -10;
+  }
+  &__overlay {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    inset: 0;
+    background-color: var(--bg-overlay);
+    transition: background-color 0.5s ease;
+    &::-webkit-scrollbar {
+      height: 0;
+      width: 0;
+      display: none;
+    }
+  }
+  &__window {
+    position: relative;
+    transform: translateY(25px);
+    border-radius: 50px;
+    opacity: 0;
+    height: fit-content;
+    max-width: calc(100vw - 40px);
+    width: 900px;
+    margin-top: 50px;
+    background-color: var(--bg);
+    box-shadow: 0px 87px 100px -100px rgba(58, 56, 55, 0.49);
+    transition:
+      transform 0.5s ease,
+      opacity 0.5s ease;
+    @include tablet {
+      border-radius: 20px;
+    }
+  }
+  &__body {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px 50px 0px 0px;
+    padding: 50px 55px 0px 55px;
+    @include tablet {
+      padding: 30px 20px;
+      border-radius: 20px 20px 0px 0px;
+    }
+  }
+  &__close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -20px;
+    right: -20px;
+    color: var(--primary);
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 0.5;
+    }
+    @include laptop-min {
+      right: 0;
+      top: -27px;
+    }
+  }
+  &__close-icon {
+    width: 100%;
+    height: 100%;
+  }
+  &__footer {
+    @include flex-between;
+    padding: 15px 55px;
+    border-radius: 0px 0px 50px 50px;
+    background-color: var(--primary);
+    color: var(--storm);
+    gap: 20px;
+    @include tablet {
+      padding: 18px 20px;
+      gap: 13px;
+      border-radius: 0px 0px 20px 20px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+  &__footer-content {
+    max-width: 420px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+    margin: 0;
+    @include tablet {
+      font-size: 12px;
+    }
+  }
+  &__footer-btn {
+    text-decoration: underline;
+    min-width: 135px;
+  }
+}

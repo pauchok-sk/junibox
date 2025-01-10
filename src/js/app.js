@@ -8,6 +8,7 @@ import fancy from "./files/fancy.js";
 import sectionsToggle from "./files/sectionsToggle.js";
 import filtres from "./files/filters.js";
 import more from "./files/more.js";
+import modal from "./files/modal.js";
 
 functions.mediaAdaptive();
 spoller();
@@ -17,3 +18,4 @@ fancy();
 sectionsToggle();
 filtres();
 more();
+modal();
