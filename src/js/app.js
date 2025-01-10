@@ -9,6 +9,7 @@ import sectionsToggle from "./files/sectionsToggle.js";
 import filtres from "./files/filters.js";
 import more from "./files/more.js";
 import modal from "./files/modal.js";
+import tab from "./files/tab.js";
 
 functions.mediaAdaptive();
 spoller();
@@ -19,3 +20,4 @@ sectionsToggle();
 filtres();
 more();
 modal();
+tab();
