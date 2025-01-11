@@ -317,6 +317,11 @@
     color: var(--bg);
     background-color: var(--primary);
   }
+  &__mobile {
+    @media (min-width: 993px) {
+      @include hidden;
+    }
+  }
   &__tab-nav {
     display: flex;
     overflow-x: auto;

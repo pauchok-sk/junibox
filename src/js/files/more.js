@@ -7,8 +7,6 @@ export default function more() {
       const items = parentItems.children;
       const btn = p.querySelector("[data-more-btn]");
 
-      console.log(items)
-
       let numberShow = +parentItems.dataset.more
       const media = parentItems.dataset.moreMedia;
       const step = +parentItems.dataset.moreStep;

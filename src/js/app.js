@@ -10,6 +10,7 @@ import filtres from "./files/filters.js";
 import more from "./files/more.js";
 import modal from "./files/modal.js";
 import tab from "./files/tab.js";
+import specificationsAll from "./files/specificationsAll.js";
 
 functions.mediaAdaptive();
 spoller();
@@ -21,3 +22,4 @@ filtres();
 more();
 modal();
 tab();
+specificationsAll();
