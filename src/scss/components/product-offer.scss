@@ -1,0 +1,121 @@
+.product-offer {
+  padding: 145px 0px 100px 0px;
+  @include laptop-min {
+    padding: 80px 0px;
+  }
+  @include tablet {
+    padding: 30px 0px 85px 0px;
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--storm);
+    @include laptop-min {
+      gap: 30px;
+    }
+    @include tablet {
+      @include hidden;
+    }
+  }
+  &__img {
+    width: 160px;
+    height: 160px;
+    border-radius: 20px;
+    object-fit: cover;
+    @include laptop-min {
+      width: 140px;
+      height: 140px;
+    }
+  }
+  &__info {
+    flex: 1;
+  }
+  &__logo {
+    display: block;
+    width: 155px;
+    margin-bottom: 10px;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 160%;
+    @include laptop-min {
+      font-size: 18px;
+    }
+  }
+  &__btn {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    @include tablet {
+      text-transform: none;
+      max-width: 100px;
+      padding: 10px 20px !important;
+      border-radius: 20px;
+      &::before,
+      &::after {
+        border-radius: 20px;
+      }
+    }
+  }
+  &__mobile {
+    @include flex-between;
+    gap: 20px;
+    @media (min-width: 744px) {
+      @include hidden;
+    }
+  }
+  &__wrapper {
+    @include flex-between;
+    gap: 10px;
+    border-radius: 20px;
+    background-color: var(--silver-l);
+    max-width: 235px;
+    padding-right: 20px;
+  }
+  &__price-title {
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+  }
+  &__price {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    @media (max-width: 399px) {
+      font-size: 16px;
+    }
+  }
+  &__compare {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+
+    @include hover {
+      .product-offer__compare-wrapper {
+        background-color: var(--bg);
+        color: var(--storm)
+      }
+    }
+  }
+  &__compare-wrapper {
+    @include flex-center;
+    width: 45px;
+    height: 35px;
+    background-color: var(--storm);
+    color: var(--bg);
+    border-radius: 100px;
+    transition: color .2s ease, background-color .2s ease;
+  }
+  &__compare-icon {
+    width: 15px;
+    height: 15px;
+  }
+}
