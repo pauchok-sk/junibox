@@ -162,6 +162,16 @@
     @include tablet {
       margin-bottom: 35px;
     }
+    &._mobile {
+      @media (min-width: 744px) {
+        @include hidden;
+      }
+      @include tablet {
+        & + .title-2 {
+          @include hidden;
+        }
+      }
+    }
   }
   &__table {
     background-color: var(--gray);
@@ -349,6 +359,17 @@
         opacity: 1;
       }
     }
+    &:not(:last-child) {
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: var(--bg);
+      }
+    }
 
     &:first-child {
       border-radius: 20px 0px 0px 20px;
@@ -361,6 +382,9 @@
       color: var(--storm);
       &::before {
         opacity: 1;
+      }
+      &::after {
+        display: none;
       }
     }
 

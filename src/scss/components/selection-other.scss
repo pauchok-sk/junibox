@@ -20,9 +20,9 @@
       bottom: 135px;
     }
     @include tablet {
-      width: 555px;
-      bottom: 10px;
-      right: -60px;
+      width: 330px;
+      bottom: 135px;
+      right: 0;
     }
 
     img {
@@ -62,7 +62,9 @@
     }
   }
   &__fact-icon {
+    position: relative;
     width: 84px;
+    z-index: -2;
     @include tablet {
       width: 50px;
     }

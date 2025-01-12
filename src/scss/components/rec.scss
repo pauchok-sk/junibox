@@ -1,0 +1,71 @@
+.rec {
+  position: relative;
+  padding: 60px 0px;
+  overflow: hidden;
+  &__container {
+    display: flex;
+    align-items: center;
+    @include laptop-middle {
+      display: block;
+    }    
+  }
+  &__info {
+    max-width: 370px;
+    @include laptop-middle {
+      max-width: none;
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      @include hidden;
+    }
+  }
+  &__question {
+    font-size: 20px;
+    line-height: 140%;
+    margin: 0px 0px 40px 0px;
+  }
+  &__title {
+    margin: 0px 0px 40px 0px;
+  }
+  &__content {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 160%;
+    margin: 0px 0px 20px 0px;
+  }
+  &__slider {
+    position: absolute !important;
+    right: 0;
+    width: 890px;
+    @include laptop {
+      width: 780px;
+    }
+    @include laptop-middle {
+      width: 100%;
+      position: static !important;
+      overflow: visible !important;
+    }
+
+    .product {
+      width: 290px !important;
+      box-sizing: border-box;
+      @include tablet {
+        width: 175px !important;
+        padding-bottom: 105px !important;
+      }
+
+      &__list {
+        margin: 0 !important;
+      }
+      &__link {
+        bottom: 0 !important;
+      }
+      &__price {
+        display: none;
+      }
+      &__img {
+        bottom: 0 !important;
+      }
+    }
+  }
+}

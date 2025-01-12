@@ -210,4 +210,26 @@ export default function slider() {
       },
     });
   }
+
+  const recSlider = document.querySelector(".rec__slider");
+
+  if (recSlider) {
+    const slides = recSlider.querySelectorAll(".swiper-slide");
+
+    const slider = new Swiper(recSlider, {
+      speed: 700,
+      modules: [Autoplay],
+      slidesPerView: "auto",
+      spaceBetween: 12,
+      grabCursor: true,
+      // autoplay: {
+      //   delay: 3500,
+      // },
+      breakpoints: {
+        744: {
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
 }
