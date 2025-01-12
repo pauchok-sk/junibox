@@ -1,0 +1,54 @@
+.server {
+  color: var(--storm);
+  &__body {
+    max-width: 425px;
+    margin-left: auto;
+    @include laptop-min {
+      margin: 0;
+    }
+  }
+  &__title {
+    margin: 0px 0px 65px 0px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__offer {
+    padding: 20px 30px;
+    border-radius: 20px;
+    background: rgba(44, 42, 41, 0.75);
+    @include mobile {
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+  &__offer-title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 0px 0px 10px 0px;
+    @include mobile {
+      @include hidden;
+    }
+  }
+  &__offer-content {
+    font-size: 12px;
+    line-height: 160%;
+    max-width: 330px;
+    margin: 0;
+
+    &._mobile {
+      @media (min-width: 480px) {
+        @include hidden;
+      }
+    }
+
+    @include mobile {
+      line-height: normal;
+      max-width: 240px;
+      &:not(.server__offer-content._mobile) {
+        @include hidden;
+      }
+    }
+  }
+}

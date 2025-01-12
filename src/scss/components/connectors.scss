@@ -1,0 +1,80 @@
+.connectors {
+  @include laptop {
+    background-size: 1000px auto !important;
+    background-position: right 0 bottom 0 !important;
+  }
+  @include laptop-min {
+    color: var(--storm);
+    background-size: 100% auto !important;
+  }
+  &__body {
+    max-width: 515px;
+  }
+  &__title {
+    margin: 0px 0px 65px 0px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 65px;
+    @include mobile {
+      flex-direction: column;
+      margin: 0;
+      gap: 0;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 30px;
+    border-radius: 100px;
+    background-color: var(--silver-l);
+
+    font-size: 14px;
+    font-weight: 500;
+    @include mobile {
+      font-size: 12px;
+      font-weight: 400;
+      padding: 0;
+      background-color: transparent;
+      color: var(--storm)
+    }
+  }
+  &__number {
+    @include flex-center;
+    border-radius: 10px;
+    background-color: var(--primary);
+    width: 36px;
+    height: 27px;
+    color: var(--storm);
+    @include mobile {
+      display: none;
+    }
+  }
+  &__module {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @include mobile {
+      @include hidden;
+    }
+  }
+  &__module-icon {
+    width: 30px;
+    height: 30px;
+    color: var(--primary);
+    @include laptop-min {
+      color: var(--storm);
+    }
+  }
+  &__module-content {
+    margin: 0;
+    font-size: 14px;
+    line-height: 160%;
+  }
+}

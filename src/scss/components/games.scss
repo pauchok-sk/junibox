@@ -1,0 +1,130 @@
+.games {
+  color: var(--bg);
+  @include mobile {
+    color: var(--storm);
+  }
+  &__body {
+    max-width: 455px;
+    margin-left: auto;
+    @include laptop-min {
+      max-width: none;
+    }
+  }
+  &__title {
+    margin: 0px 0px 80px 0px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+    @include mobile {
+      margin: 0;
+    }
+  }
+  &__head-icon {
+    width: 30px;
+    height: 30px;
+    color: var(--primary);
+    @include laptop-min {
+      color: var(--main);
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+  &__head-title {
+    font-size: 14px;
+    max-width: 145px;
+    margin: 0;
+    @include mobile {
+      margin: 0;
+      font-size: 12px;
+      font-weight: 400;
+      max-width: none;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 65px;
+    @include mobile {
+      gap: 0;
+      margin: 0;
+    }
+
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 18px;
+
+      font-size: 14px;
+      line-height: 140%;
+      @include mobile {
+        line-height: normal;
+        padding: 0;
+        font-size: 12px;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 2px;
+        background-color: var(--primary);
+
+        @include laptop-min {
+          background-color: var(--main);
+        }
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+  &__offer {
+    @include flex-between;
+    gap: 30px;
+    padding: 20px 30px;
+    background-color: rgba(44, 42, 41, 0.75);
+    border-radius: 20px;
+    @include mobile {
+      @include hidden;
+    }
+  }
+  &__offer-content {
+    font-size: 12px;
+    line-height: 160%;
+    margin: 0;
+    max-width: 140px;
+  }
+  &__offer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__offer-btn {
+    @include flex-center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 100px;
+    min-width: 190px;
+    background-color: var(--fuscous);
+
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: underline;
+    transition: background-color 0.2s ease;
+    @include hover {
+      background-color: var(--tapa);
+    }
+  }
+}

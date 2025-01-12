@@ -69,7 +69,7 @@
     row-gap: 0px;
     &._hidden {
       li {
-        &:not(:nth-child(-n+14)) {
+        &:not(:nth-child(-n + 14)) {
           display: none;
         }
       }
@@ -105,7 +105,7 @@
     @include tablet {
       &._hidden {
         li {
-          &:not(:nth-child(-n+5)) {
+          &:not(:nth-child(-n + 5)) {
             display: none;
           }
         }
@@ -151,5 +151,196 @@
   }
   &__specifications-btn {
     margin: 40px auto 0px auto;
+  }
+  &__guarantee-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    @include tablet {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  }
+  &__guarantee-info {
+    max-width: 350px;
+  }
+  &__guarantee-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 160%;
+    color: var(--primary);
+    margin: 0;
+    @include tablet {
+      text-align: center;
+    }
+  }
+  &__guarantee-content {
+    font-size: 14px;
+    line-height: 160%;
+    margin: 0;
+  }
+  &__guarantee-btn {
+    font-size: 11px;
+    font-weight: 500;
+    text-decoration: underline;
+
+    padding: 15px 20px;
+    border-radius: 100px;
+    background-color: var(--storm);
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+    @include hover {
+      color: var(--storm);
+      background-color: var(--primary);
+    }
+  }
+  &__set-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    li {
+      padding: 10px 30px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: var(--silver-l);
+
+      font-size: 14px;
+      font-weight: 500;
+
+      @include tablet {
+        padding: 10px 20px;
+      }
+    }
+  }
+  &__set-number {
+    @include flex-center;
+    width: 33px;
+    height: 27px;
+    border-radius: 10px;
+    background-color: var(--primary);
+
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--storm);
+  }
+  &__documentation-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 10px 30px;
+      background-color: var(--silver-l);
+      border-radius: 100px;
+
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 160%;
+      @include tablet {
+        font-size: 12px;
+        line-height: 140%;
+      }
+
+      span {
+        color: var(--primary);
+        display: block;
+      }
+    }
+  }
+  &__documentation-icon {
+    width: 30px;
+    height: 30px;
+    color: var(--primary);
+    @include tablet {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &__delivery-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 110px;
+    row-gap: 30px;
+    @include tablet {
+      row-gap: 20px;
+    }
+  }
+  &__delivery-article {
+    position: relative;
+    font-size: 14px;
+    line-height: 160%;
+    padding-left: 15px;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 3px;
+      border-radius: 10px;
+      background-color: var(--primary);
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+  &__service {
+    display: flex;
+    gap: 50px;
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+  &__service-title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 120%;
+    max-width: 290px;
+    margin: 0;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include tablet {
+      width: 100%;
+    }
+    li {
+      position: relative;
+      padding-left: 15px;
+      font-size: 14px;
+      font-weight: 400;
+      gap: 3px;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 2px;
+        background-color: var(--primary);
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: underline;
+        font-weight: 700;
+        @include hover {
+          text-decoration: none;
+        }
+      }
+    }
   }
 }

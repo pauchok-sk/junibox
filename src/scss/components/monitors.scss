@@ -1,0 +1,76 @@
+.monitors {
+  @include mobile {
+    color: var(--storm);
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: linear-gradient(
+      248deg,
+      rgba(238, 237, 235, 0) 12.87%,
+      #eeedeb 109.16%
+    );
+    z-index: -1;
+    @include mobile {
+      display: none;
+    }
+  }
+  &__body {
+    max-width: 590px;
+  }
+  &__title {
+    margin: 0px 0px 65px 0px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__content {
+    max-width: 335px;
+    font-size: 12px;
+    line-height: 160%;
+    margin-bottom: 65px;
+    @include mobile {
+      @include hidden;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__permissions {
+    width: fit-content;
+    padding: 10px 30px;
+    border-radius: 100px;
+    border: 1px solid var(--primary);
+    @include mobile {
+      @include hidden;
+    }
+  }
+  &__permissions-title {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  &__permissions-value {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  &__tag {
+    display: block;
+    background-color: var(--primary);
+    padding: 15px;
+    border-radius: 20px;
+    width: fit-content;
+
+    color: white;
+    font-size: 12px;
+    @media (min-width:480px) {
+      @include hidden;
+    }
+  }
+}
