@@ -12,6 +12,7 @@ import modal from "./files/modal.js";
 import tab from "./files/tab.js";
 import specificationsAll from "./files/specificationsAll.js";
 import sectionCard from "./files/section-card.js";
+import ranges from "./files/ranges.js";
 
 functions.mediaAdaptive();
 spoller();
@@ -25,3 +26,4 @@ modal();
 tab();
 specificationsAll();
 sectionCard();
+ranges();
