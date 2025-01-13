@@ -69,10 +69,10 @@
     position: relative;
     overflow: hidden;
     border-radius: 50px 50px 0px 0px;
-    padding: 50px 55px 0px 55px;
+    padding: 50px 55px 35px 55px;
     @include tablet {
       padding: 30px 20px;
-      border-radius: 20px 20px 0px 0px;
+      border-radius: 20px 20px 65px 0px;
     }
   }
   &__close {
@@ -129,5 +129,13 @@
   &__footer-btn {
     text-decoration: underline;
     min-width: 135px;
+  }
+  &__footer-btn-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    @include mobile {
+      display: none;
+    }
   }
 }

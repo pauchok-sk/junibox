@@ -28,6 +28,12 @@
     &::before {
       display: none;
     }
+
+    &._open {
+      .section-card__body {
+        max-height: none;
+      }
+    }
   }
 
   &__body {
@@ -35,14 +41,16 @@
       background: none !important;
     }
     @include mobile {
+      display: block;
       position: relative;
       overflow: hidden;
       padding: 40px;
       width: 100%;
       border-radius: 50px;
       box-shadow: 0px 25px 50px 0px rgba(147, 138, 133, 0.5);
-      height: 220px;
+      height: 100%;
       z-index: 1;
+      transition: max-height 0.4s ease;
 
       &::before,
       &::after {
@@ -91,7 +99,9 @@
     border-radius: 50%;
     background-color: var(--storm);
     color: var(--primary);
-    transition: color .2s ease, background-color .2s ease;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
     z-index: 10;
     @include hover {
       color: var(--storm);

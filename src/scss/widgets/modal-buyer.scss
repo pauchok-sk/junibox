@@ -31,6 +31,20 @@
       right: -270px;
     }
 
+    &._women {
+      top: 0;
+      @include tablet {
+        right: -100px;
+      }
+      @include tablet-min {
+        right: -195px;
+      }
+      @include mobile {
+        right: -100px;
+        opacity: 0.5;
+      }
+    }
+
   }
   &__tag {
     display: block;
@@ -76,6 +90,11 @@
     }
     @include tablet-min {
       max-width: 240px;
+    }
+
+    span {
+      color: var(--primary);
+      font-weight: 500;
     }
   }
   &__item-number {

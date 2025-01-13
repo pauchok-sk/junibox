@@ -11,6 +11,7 @@ import more from "./files/more.js";
 import modal from "./files/modal.js";
 import tab from "./files/tab.js";
 import specificationsAll from "./files/specificationsAll.js";
+import sectionCard from "./files/section-card.js";
 
 functions.mediaAdaptive();
 spoller();
@@ -23,3 +24,4 @@ more();
 modal();
 tab();
 specificationsAll();
+sectionCard();

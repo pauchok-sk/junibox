@@ -88,6 +88,10 @@
         width: 175px !important;
       }
 
+      &._hidden {
+        display: none !important;
+      }
+
       &__link {
         bottom: 72px;
       }
@@ -168,5 +172,10 @@
         }
       }
     }
+  }
+  &__btn-more {
+    max-width: 300px;
+    width: 100%;
+    margin: 40px auto 0px auto;
   }
 }
