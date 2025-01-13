@@ -76,6 +76,10 @@
     align-items: center;
     gap: 20px;
     border-radius: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
   }
   &__row-content {
     font-size: 16px;
@@ -84,10 +88,14 @@
     color: var(--primary);
     margin: 0;
   }
+  &__row-nav {
+    flex: 1;
+  }
   &__wrapper-range {
     position: relative;
     display: flex;
     align-items: center;
+    width: 100%;
     padding: 10px 15px;
     border-radius: 100px;
     background-color: var(--storm);
@@ -125,7 +133,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    width: 215px;
+    flex: 1;
     height: 5px;
     background-color: var(--alto);
 
@@ -139,6 +147,17 @@
       border-radius: 50%;
       background-color: var(--alto);
       border: 3px solid var(--storm);
+    }
+  }
+  &__range-list {
+    display: flex;
+
+    li {
+      @include flex-center;
+      flex: 1;
+      padding: 15px;
+
+      font-size: 14px;
     }
   }
 }
