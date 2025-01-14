@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   @@include('html/head.html',{ "title":"pauchoo0k" })
   <body class="body">
@@ -7,9 +7,141 @@
     @@include('html/widgets/sections.html')
     @@include('html/widgets/modals.html')
     <main>
-      
       @@include('html/components/selection-simple.html')
-
+      @@include('html/components/res.html')
+      <section class="delivery">
+        <div class="container">
+          <div class="delivery__head">
+            <svg class="delivery__head-icon">
+              <use xlink:href="img/icons/icons.svg#icon-heart"></use>
+            </svg>
+            <p class="delivery__head-content">
+              Смело выбирайте любой из подобранных — и пользуйтесь классным
+              сервисом Junibox
+            </p>
+          </div>
+          <h2 class="title-2 delivery__title">Сервис как для друзей</h2>
+          <p class="delivery__content">Потому что вы для нас и есть друзья.</p>
+          <div class="delivery__body">
+            <div class="delivery__item">
+              <img src="@img/ozon.png" alt="icon" class="delivery__item-logo" />
+              <h6 class="delivery__item-title">Доставка за 1-2 дня</h6>
+              <p class="delivery__item-content">
+                Junibox продается физлицам <br />
+                через Озон, быстрая доставка <br />
+                в любой регион России
+              </p>
+              <div class="delivery__item-primary">
+                <svg class="delivery__primary-icon">
+                  <use xlink:href="img/icons/icons.svg#icon-return"></use>
+                </svg>
+                <div>
+                  <span class="delivery__primary-title">Простой возврат</span>
+                  <span class="delivery__primary-content"
+                    >Через тот же Озон.</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="delivery__item">
+              <img src="@img/cdek.png" alt="icon" class="delivery__item-logo" />
+              <h6 class="delivery__item-title">
+                Настоящая гарантия 1 год через СДЭК
+              </h6>
+              <p class="delivery__item-content">
+                Заменить или сдать в ремонт — <br />
+                в любом удобном пункте
+              </p>
+            </div>
+            <div class="delivery__item">
+              <img
+                src="@img/termo.png"
+                alt="icon"
+                class="delivery__item-logo"
+              />
+              <h6 class="delivery__item-title">Бесплатное ТО через 4 года</h6>
+              <p class="delivery__item-content">
+                Бесплатное ТО через 4 года Схема та же: отнесите свой мини-ПК в
+                СДЭК, а через несколько дней получите почищенный и с замененной
+                термопастой.
+              </p>
+              <div class="delivery__item-primary">
+                <svg class="delivery__primary-icon">
+                  <use xlink:href="img/icons/icons.svg#icon-monitor"></use>
+                </svg>
+                <div>
+                  <span class="delivery__primary-content"
+                    >Так мини-ПК могут работать практически вечно.</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="delivery__item">
+              <img
+                src="@img/windows-11.png"
+                alt="icon"
+                class="delivery__item-logo"
+              />
+              <h6 class="delivery__item-title">
+                Всё необходимое <br />
+                в доступе на сайте
+              </h6>
+              <p class="delivery__item-content">
+                Дистрибутивы ПО, операционных систем, инструкции и прочее — в
+                разделе
+                <a href="#">“Драйверы”</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="help _bottom-mobile">
+        <div class="container">
+          <img src="@img/tel-opacity.png" alt="image" class="help__tel-opacity" />
+          <img src="@img/tel.png" alt="image" class="help__tel" />
+          <div class="help__item _heart">
+            <span class="help__subtitle">А еще</span>
+            <h2 class="title-2 help__title">
+              дружелюбная <br />
+              техподдержка <br />
+              всегда на связи
+            </h2>
+            <p class="help__top-content">
+              Никаких обращений <br />
+              и заполнения лишних форм. <br />
+              <br />
+              Просто пишите в удобный мессенджер — и мы ответим в течение 5-10 минут.
+            </p>
+            <ul class="list help__social">
+              <li>
+                <a href="#" target="_blank" class="help__social-btn">
+                  <img src="@img/wh.svg" alt="icon" class="help__social-icon" />
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" class="help__social-btn">
+                  <img src="@img/tg.svg" alt="icon" class="help__social-icon" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="help__item-wrapper _fill">
+            <img src="@img/operator.png" alt="image" class="help__operator" />
+            <div class="help__item">
+              <img src="@img/marks-gray.svg" alt="icon" class="help__item-marks" />
+              <p class="help__bottom-content">
+                Мы работаем, чтобы выбор, покупка <br />
+                и использование ПК были простыми, <br />
+                <span>словно общение с хорошим приятелем.</span>
+              </p>
+              <p class="help__subcontent">
+                И чтобы во всем этом у вас не возникало <br />
+                ни малейшей тени сомнения.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     @@include('html/components/footer.html')
     <script src="js/app.min.js"></script>

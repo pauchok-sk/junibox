@@ -14,8 +14,11 @@ export default function ranges() {
         Array.from(radios).findIndex((item) => item.checked === true) + 1;
       const offset = radios.length === 4 ? 12.5 : 16.5;
 
+      range.value = offset;
+
       if (checkedRadioIndex > 0) {
         const percent = checkedRadioIndex * (100 / radios.length);
+        console.log(percent)
 
         currentSlider.style.left = `${percent - offset}%`;
       } else {

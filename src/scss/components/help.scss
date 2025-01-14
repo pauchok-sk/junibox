@@ -5,6 +5,9 @@
   z-index: 1;
   @include tablet {
     padding-top: 295px;
+    &._bottom-mobile {
+      margin-bottom: 80px;
+    }
   }
   &__tel-opacity {
     position: absolute;
@@ -40,8 +43,49 @@
   &__item-wrapper {
     position: relative;
     width: 100%;
+    z-index: 1;
     @include laptop {
       position: static;
+    }
+
+    &._fill {
+      border-radius: 50px;
+      padding: 80px 40px;
+      background-color: var(--silver);
+      @include laptop {
+        position: relative;
+      }
+      @include tablet {
+        padding: 50px 20px;
+        width: auto;
+        margin: 0 -20px;
+        background-color: var(--gallery);
+      }
+
+      .help__item {
+        padding: 0;
+      }
+
+      .help__operator {
+        left: 60px;
+        @include laptop {
+          left: -150px;
+        }
+        @include laptop-min {
+          width: 370px;
+          right: -164px;
+          left: auto;
+        }
+        @include tablet {
+          width: 340px;
+          right: -145px;
+          bottom: -40px;
+        }
+        @media (max-width: 399px) {
+          right: -130px;
+          width: 310px;
+        }
+      }
     }
   }
   &__item {

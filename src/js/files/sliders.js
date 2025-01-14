@@ -222,14 +222,31 @@ export default function slider() {
       slidesPerView: "auto",
       spaceBetween: 12,
       grabCursor: true,
-      // autoplay: {
-      //   delay: 3500,
-      // },
+      autoplay: {
+        delay: 3500,
+      },
       breakpoints: {
         744: {
           spaceBetween: 20,
         },
       },
     });
+  }
+
+  const productSliders = document.querySelectorAll(".product__slider");
+
+  if (productSliders.length) {
+    productSliders.forEach(slider => {
+      const swiper = new Swiper(slider, {
+        speed: 700,
+        modules: [Pagination],
+        grabCursor: true,
+        spaceBetween: 15,        
+        pagination: {
+          el: slider.querySelector(".product__slider-pagination"),
+          clickable: true
+        },
+      });
+    })
   }
 }

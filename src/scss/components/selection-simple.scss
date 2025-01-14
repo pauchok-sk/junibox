@@ -1,4 +1,5 @@
 .selection-simple {
+  overflow: hidden;
   padding: 240px 0px 80px 0px;
   @include laptop-min {
     padding: 185px 0px 40px 0px;
@@ -67,9 +68,21 @@
     }
   }
   &__form {
+    @include tablet {
+      margin: 0 -20px;
+    }
+  }
+  &__form-wrapper {
     padding: 45px;
     background-color: var(--gray);
     border-radius: 20px;
+    @include tablet {
+      padding: 25px 20px;
+    }
+    @include mobile {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
   &__row {
     display: flex;
@@ -80,6 +93,14 @@
     &:not(:last-child) {
       margin-bottom: 50px;
     }
+
+    @include laptop-middle {
+      flex-wrap: wrap;
+      gap: 15px;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   }
   &__row-content {
     font-size: 16px;
@@ -87,9 +108,19 @@
     flex: 0 1 230px;
     color: var(--primary);
     margin: 0;
+    @include laptop-middle {
+      flex-basis: 100%;
+      text-align: center;
+      br {
+        display: none;
+      }
+    }
   }
   &__row-nav {
     flex: 1;
+    @include laptop-min {
+      text-align: center;
+    }
   }
   &__wrapper-range {
     position: relative;
@@ -123,7 +154,6 @@
   &__input-radio {
     display: none;
     &:checked + label {
-      background-color: var(--primary);
       &::before {
         border-color: var(--primary) !important;
       }
@@ -136,6 +166,12 @@
     flex: 1;
     height: 5px;
     background-color: var(--alto);
+    &:nth-child(4) {
+      border-radius: 10px 0px 0px 10px;
+    }
+    &:last-child {
+      border-radius: 0px 10px 10px 0px;
+    }
 
     &::before {
       position: absolute;
@@ -158,6 +194,15 @@
       padding: 15px;
 
       font-size: 14px;
+      @include tablet {
+        font-size: 12px;
+      }
+      @include mobile {
+        font-size: 10px;
+      }
     }
+  }
+  &__btn-res {
+    margin: 40px auto 0px auto;
   }
 }
