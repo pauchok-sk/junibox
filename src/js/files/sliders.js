@@ -236,17 +236,28 @@ export default function slider() {
   const productSliders = document.querySelectorAll(".product__slider");
 
   if (productSliders.length) {
-    productSliders.forEach(slider => {
+    productSliders.forEach((slider) => {
       const swiper = new Swiper(slider, {
         speed: 700,
         modules: [Pagination],
         grabCursor: true,
-        spaceBetween: 15,        
+        spaceBetween: 15,
         pagination: {
           el: slider.querySelector(".product__slider-pagination"),
-          clickable: true
+          clickable: true,
         },
       });
-    })
+    });
+  }
+
+  const compareSlider = document.querySelector(".compare__slider");
+
+  if (compareSlider) {
+    const swiper = new Swiper(compareSlider, {
+      speed: 700,
+      grabCursor: true,
+      spaceBetween: 10,
+      slidesPerView: "auto"
+    });
   }
 }
