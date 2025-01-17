@@ -1,0 +1,94 @@
+.help-main {
+  padding: 310px 0px 150px 0px;
+  @include laptop {
+    background-size: 800px auto !important;
+  }
+  @include laptop-middle {
+    background-size: 600px auto !important;
+    background-position: bottom 0 right -90px !important;
+    padding: 200px 0px 90px 0px;
+  }
+  @include laptop-min {
+    background-size: 500px auto !important;
+  }
+  @include tablet {
+    padding: 160px 0px 0px 0px;
+    background-size: 405px auto !important;
+    background-position: center bottom 135px !important;
+  }
+  &__title {
+    max-width: 330px;
+    margin: 0px 0px 40px 0px;
+    @include tablet {
+      max-width: none;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+  }
+  &__content {
+    font-size: 24px;
+    color: var(--primary);
+    max-width: 380px;
+    margin: 0px 0px 40px 0px;
+    @include tablet {
+      font-size: 16px;
+      text-align: center;
+      margin: 0px auto 265px auto;
+    }
+  }
+  &__social {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 40px;
+    border-radius: 50px;
+    padding: 10px 30px;
+    background-color: var(--storm);
+    @include tablet {
+      border-radius: 50px 50px 0px 0px;
+      max-width: none;
+      width: 100%;
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+      padding: 25px 20px 20px 20px;
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        height: 50px;
+        background-color: var(--storm);
+        bottom: -50px;
+      }
+    }
+  }
+  &__social-content {
+    max-width: 240px;
+    font-size: 14px;
+    line-height: 160%;
+    margin: 0;
+  }
+  &__social-list {
+    display: flex;
+    gap: 20px;
+
+    a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      transition: transform 0.2s ease;
+      @include hover {
+        transform: scale(1.07);
+      }
+      @include tablet {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+  &__social-icon {
+    width: 100%;
+  }
+}

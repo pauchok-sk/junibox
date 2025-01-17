@@ -1,0 +1,119 @@
+.questions {
+  &__container {
+    max-width: calc((100vw - 180px) + 40px);
+    @include desktop {
+      max-width: var(--container-width);
+    }
+  }
+  &__body {
+    position: relative;
+    width: 100%;
+    border-radius: 50px;
+    background-color: var(--silver);
+    padding: 75px;
+    z-index: 1;
+    @include laptop {
+      padding: 50px;
+    }
+    @include tablet {
+      text-align: center;
+      padding: 40px 30px;
+    }
+  }
+  &__title {
+    margin: 0px 0px 65px 0px;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 100px;
+    row-gap: 20px;
+    @include laptop {
+      gap: 40px;
+      row-gap: 20px;
+    }
+    @include tablet {
+      gap: 50px;
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  &__item {
+    grid-column: 4 span;
+    @include laptop-min {
+      grid-column: 6 span;
+    }
+
+    &._hidden {
+      display: none;
+    }
+  }
+  &__item-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 120%;
+    color: #222;
+    margin: 0px 0px 20px 0px;
+    @include tablet {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+  &__item-content {
+    font-size: 14px;
+    line-height: 160%;
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+    a {
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: underline;
+      @include hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__item-social {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    @include tablet {
+      justify-content: center;
+    }
+
+    a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      transition: transform 0.2s ease;
+      @include hover {
+        transform: scale(1.07);
+      }
+    }
+  }
+  &__item-icon {
+    width: 100%;
+    height: 100%;
+  }
+  &__more-btn {
+    display: none;
+    max-width: 285px;
+    min-height: 66px;
+    width: 100%;
+    margin: 40px auto 0px auto;
+
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.32px;
+    @include laptop-min {
+      display: flex;
+    }
+  }
+}
