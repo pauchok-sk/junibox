@@ -1,0 +1,134 @@
+.refund {
+  position: relative;
+  overflow: hidden;
+  padding: 310px 0px 0px 0px;
+  margin-bottom: 80px;
+  z-index: 1;
+  @include laptop-min {
+    padding: 220px 0px 0px 0px;
+  }
+  @include tablet {
+    padding-top: 165px;
+  }
+  &__title {
+    max-width: 430px;
+    margin: 0px 0px 40px 0px;
+    @include tablet {
+      max-width: 235px;
+    }
+  }
+  &__content {
+    font-size: 14px;
+    line-height: 160%;
+    margin: 0px 0px 205px 0px;
+    max-width: 230px;
+    @include tablet {
+      max-width: 175px;
+      margin-bottom: 195px;
+      br {
+        display: none;
+      }
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 40px;
+    border-radius: 50px;
+    padding: 10px 30px;
+    background-color: var(--storm);
+    @include tablet {
+      max-width: none;
+      width: 100%;
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+      padding: 15px 15px 30px 15px;
+    }
+  }
+  &__social-content {
+    max-width: 240px;
+    font-size: 14px;
+    line-height: 160%;
+    margin: 0;
+  }
+  &__social-list {
+    display: flex;
+    gap: 20px;
+
+    a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      transition: transform .2s ease;
+      @include hover {
+        transform: scale(1.07);
+      }
+      @include tablet {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+  &__social-icon {
+    width: 100%;
+  }
+  &__decor {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    @include tablet {
+      width: 560px;
+      bottom: 100px;
+      right: -125px;
+    }
+  }
+  &__decor-body {
+    position: relative;
+    width: 680px;
+    height: 500px;
+    border-radius: 50px 0px 0px 50px;
+    background-color: var(--silver);
+    @include laptop-middle {
+      width: 500px;
+      height: 395px;
+    }
+    @include laptop-min {
+      width: 365px;
+      height: 325px;
+    }
+    @include tablet {
+      width: auto;
+      height: auto;
+      background-color: transparent;
+    }
+  }
+  &__decor-img {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: -170px;
+    @include laptop-middle {
+      width: 585px;
+      left: -130px;
+    }
+    @include laptop-min {
+      width: 405px;
+      left: -90px;
+    }
+    @include tablet {
+      position: static;
+      max-width: none;
+      width: 100%;
+    }
+  }
+}

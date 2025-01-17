@@ -110,11 +110,8 @@
       bottom: 140px;
     }
     @include tablet {
-      right: -95px;
+      right: -50px;
       bottom: 190px;
-    }
-    @include mobile {
-      right: -65px;
     }
   }
   &__decor-body {
@@ -136,7 +133,6 @@
   &__decor-img {
     position: absolute;
     display: block;
-    width: 595px;
     height: auto;
     left: -65px;
     bottom: 0;
@@ -145,6 +141,7 @@
       left: -50px;
     }
     @include laptop-min {
+      max-width: none;
       width: 100%;
       position: static;
     }
