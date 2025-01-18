@@ -5,16 +5,19 @@
   }
   @include laptop-middle {
     background-size: 600px auto !important;
-    background-position: bottom 0 right -90px !important;
+    background-position: bottom 0 right 40px !important;
     padding: 200px 0px 90px 0px;
   }
   @include laptop-min {
-    background-size: 500px auto !important;
+    background-size: 400px auto !important;
   }
   @include tablet {
     padding: 160px 0px 0px 0px;
-    background-size: 405px auto !important;
+    background-size: 375px auto !important;
     background-position: center bottom 135px !important;
+  }
+  @media (max-width: 400px) {
+    background-size: 335px auto !important;
   }
   &__title {
     max-width: 330px;

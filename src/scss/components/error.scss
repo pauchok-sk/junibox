@@ -1,0 +1,153 @@
+.error {
+  padding: 245px 0px 85px 0px;
+  @include laptop-min {
+    padding: 180px 0px 50px 0px;
+  }
+  &__head {
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 45px;
+    @include laptop-min {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+    }
+    @include tablet {
+      gap: 10px;
+      margin-bottom: 50px;
+    }
+  }
+  &__head-info {
+    max-width: 515px;
+    @include laptop-middle {
+      max-width: 480px;
+    }
+  }
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    @include laptop-min {
+      justify-content: center;
+    }
+  }
+  &__title {
+    margin: 0;
+  }
+  &__smile {
+    width: 40px;
+    @include tablet {
+      width: 30px;
+    }
+  }
+  &__head-content {
+    font-size: 16px;
+    line-height: 160%;
+    margin: 0px 0px 40px 0px;
+    @include tablet {
+      font-size: 14px;
+      margin-bottom: 15px;
+      max-width: 255px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+  &__primary-content {
+    font-size: 24px;
+    color: var(--primary);
+    margin: 0;
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__number {
+    font-size: 256px;
+    font-weight: 100;
+    color: var(--primary);
+    @include laptop-middle {
+      font-size: 224px;
+    }
+    @include tablet {
+      font-size: 128px;
+      font-weight: 100;
+    }
+  }
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 40px;
+    @include laptop-min {
+      gap: 20px;
+    }
+    @include tablet-min {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  &__item {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px 50px;
+    border-radius: 50px;
+    grid-column: 4 span;
+    min-height: 500px;
+
+    border-radius: 50px;
+    box-shadow: 0px 50px 50px -50px rgba(58, 56, 55, 0.27);
+    z-index: 1;
+
+    @include hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+    @include laptop-middle {
+      min-height: 400px;
+    }
+    @include laptop-min {
+      grid-column: 6 span;
+    }
+    @include tablet {
+      padding: 30px;
+    }
+    @include tablet-min {
+      min-height: 200px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      inset: 0;
+    }
+    &::before {
+      background: linear-gradient(
+        188deg,
+        rgba(238, 237, 235, 0) 45.69%,
+        #eeedeb 94.04%
+      );
+      z-index: -2;
+    }
+    &::after {
+      background: linear-gradient(
+        0deg,
+        rgba(74, 127, 195, 0.5) 0%,
+        rgba(74, 127, 195, 0.5) 100%
+      );
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.2s ease;
+    }
+  }
+  &__item-title {
+    font-size: 20px;
+    line-height: 120%;
+    margin: 0;
+  }
+}
