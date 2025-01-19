@@ -2105,6 +2105,9 @@ body {
   max-width: 435px;
   margin: 0 0 30px 0
 }
+.offer__btn {
+  text-align: start!important
+}
 .offer__img {
   position: absolute;
   bottom: 0;
@@ -2502,6 +2505,7 @@ body {
 }
 .models-rec__btn {
   padding: 18px 40px!important;
+  text-align: start;
   gap: 20px
 }
 .models-rec__btn .btn__icon {
@@ -2716,11 +2720,11 @@ body {
   inset: 0
 }
 .delivery::before {
-  background: url(../img/guide.webp) top 0 right -255px/960px auto no-repeat;
+  background: url(../img/guide.png) top 0 right -255px/960px auto no-repeat;
   z-index: -1
 }
 .delivery::after {
-  background: url(../img/guide-opacity.webp) top 200px right -90px/810px auto no-repeat;
+  background: url(../img/guide-opacity.png) top 200px right -90px/810px auto no-repeat;
   z-index: -2
 }
 .delivery__head {
@@ -2752,7 +2756,7 @@ body {
   height: 110px;
   bottom: -10px;
   left: 155px;
-  background: url(../img/marker.webp) 0 0/100% auto no-repeat;
+  background: url(../img/marker.png) 0 0/100% auto no-repeat;
   z-index: -1
 }
 .delivery__content {
@@ -10089,7 +10093,7 @@ html.with-fancybox body.hide-scrollbar {
     padding: 5px 15px
   }
   .delivery::before {
-    background: url(../img/guide-opacity.webp) top -160px right -520px/810px auto no-repeat
+    background: url(../img/guide-opacity.png) top -160px right -520px/810px auto no-repeat
   }
   .delivery::after {
     background-size: 810px auto;

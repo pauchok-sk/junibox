@@ -61,6 +61,7 @@
   }
   &__btn {
     padding: 18px 40px !important;
+    text-align: start;
     gap: 20px;
     @include tablet {
       padding: 20px 30px !important;
