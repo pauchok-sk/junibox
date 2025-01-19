@@ -3537,7 +3537,8 @@ body {
   margin-left: auto
 }
 .realization {
-  position: relative
+  position: relative;
+  margin-bottom: 140px
 }
 .realization__title {
   max-width: 460px;
@@ -4232,6 +4233,9 @@ body {
 .selection__btn .btn__icon {
   width: 20px;
   height: 20px
+}
+.selection__btn span:nth-child(3) {
+  display: none
 }
 .perfomance {
   overflow: hidden;
@@ -10230,6 +10234,9 @@ html.with-fancybox body.hide-scrollbar {
   .reliable__img {
     width: 310px
   }
+  .realization {
+    margin: 0
+  }
   .realization__content {
     max-width: none
   }
@@ -12939,6 +12946,12 @@ html.with-fancybox body.hide-scrollbar {
   }
   .selection__btn:not(._min-btn) {
     width: 100%
+  }
+  .selection__btn span {
+    display: none
+  }
+  .selection__btn span:nth-child(3) {
+    display: block
   }
   .perfomance__title:not(._mobile) {
     position: absolute;
