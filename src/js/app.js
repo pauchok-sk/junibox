@@ -1,5 +1,5 @@
+import "./libs/inputmask.min.js";
 import * as functions from "./files/functions.js";
-
 import "../scss/style.scss";
 import spoller from "./files/spoller.js";
 import slider from "./files/sliders.js";
@@ -13,6 +13,7 @@ import tab from "./files/tab.js";
 import specificationsAll from "./files/specificationsAll.js";
 import sectionCard from "./files/section-card.js";
 import ranges from "./files/ranges.js";
+import inputmask from "./files/inputmask.js";
 
 functions.mediaAdaptive();
 spoller();
@@ -27,3 +28,4 @@ tab();
 specificationsAll();
 sectionCard();
 ranges();
+inputmask();

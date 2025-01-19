@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>pauchoo0k</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250119170731" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250119170731" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="body">
+	<header class="header">
+		<div class="header__top">
+			<div class="container header__top-container">
+				<ul class="list header__soc">
+					<li>
+						<a href="#" target="_blank" class="header__soc-btn">
+							<svg class="header__soc-icon">
+								<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="header__soc-btn">
+							<svg class="header__soc-icon">
+								<use xlink:href="img/icons/icons.svg#icon-wh"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="header__soc-btn">
+							<svg class="header__soc-icon">
+								<use xlink:href="img/icons/icons.svg#icon-mail"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+				<a href="/" class="header__logo">
+					<img src="img/logo.svg" alt="logo" class="header__logo-img" />
+				</a>
+				<div class="header__contacts">
+					<a href="mailto:info@junibox.ru" class="header__mail">info@junibox.ru</a>
+					<a href="tel:88005553535" class="header__tel">8 (800) 555-35-35</a>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<nav class="header__main">
+				<ul class="list header__mobile-menu">
+					<li>
+						<a href="#" class="header__mobile-btn">
+							<svg class="header__menu-icon">
+								<use xlink:href="img/icons/icons.svg#icon-home"></use>
+							</svg>
+							<span class="header__mobile-title">Главная</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="header__mobile-btn">
+							<svg class="header__menu-icon">
+								<use xlink:href="img/icons/icons.svg#icon-catalog"></use>
+							</svg>
+							<span class="header__mobile-title">Каталог</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="header__mobile-btn">
+							<svg class="header__menu-icon">
+								<use xlink:href="img/icons/icons.svg#icon-selection"></use>
+							</svg>
+							<span class="header__mobile-title">Подбор</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="header__mobile-btn">
+							<svg class="header__menu-icon">
+								<use xlink:href="img/icons/icons.svg#icon-lines"></use>
+							</svg>
+							<span class="header__menu-number">5</span>
+							<span class="header__mobile-title">Сравнение</span>
+						</a>
+					</li>
+					<li>
+						<button class="btn-clear header__mobile-btn" id="sections-open">
+							<svg class="header__menu-icon">
+								<use xlink:href="img/icons/icons.svg#icon-points"></use>
+							</svg>
+							<span class="header__mobile-title">ещё</span>
+						</button>
+					</li>
+				</ul>
+				<button id="catalog-btn" class="btn-clear header__catalog-btn">
+					<svg class="header__menu-icon">
+						<use xlink:href="img/icons/icons.svg#icon-catalog"></use>
+					</svg>
+					<div class="header__menu-title">Каталог товаров</div>
+					<span class="header__mobile-title">Каталог</span>
+				</button>
+				<ul class="list header__list">
+					<li>
+						<a href="#">Подбор</a>
+					</li>
+					<li>
+						<a href="#">Гарантия</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown__btn">
+							<span>Поддержка</span>
+							<svg class="dropdown__arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+						</a>
+						<div class="dropdown__item">
+							<ul class="list dropdown__list">
+								<li><a href="#">Обмен и возврат</a></li>
+								<li><a href="#">База знаний</a></li>
+								<li><a href="#">Техподдержка 24/7</a></li>
+								<li><a href="#">драйверы</a></li>
+							</ul>
+						</div>
+						<div class="dropdown__item"></div>
+					</li>
+					<li>
+						<a href="#">О Junibox</a>
+					</li>
+				</ul>
+				<a href="#" class="header__clients">
+					<span>Корпоративным клиентам</span>
+					<div class="header__clients-wrapper">
+						<svg class="header__clients-arrow">
+							<use xlink:href="img/icons/icons.svg#icon-arrows"></use>
+						</svg>
+					</div>
+				</a>
+			</nav>
+		</div>
+	</header>
+
+	<div class="drop-catalog" id="catalog">
+		<div class="drop-catalog__body">
+			<div class="drop-catalog__offer" style="
+        background: url(&quot;img/catalog.webp&quot;) 0 0 / cover no-repeat;
+      ">
+				<h5 class="drop-catalog__offer-title">Та же мощь — теперь на ладони</h5>
+				<p class="drop-catalog__offer-content">
+					Никаких компромиссов с мини-ПК от Junibox
+				</p>
+			</div>
+			<div class="drop-catalog__types">
+				<div class="drop-catalog__types-item">
+					<input type="checkbox" id="easy-type" class="drop-catalog__input-check" />
+					<label for="easy-type" class="drop-catalog__type">Лёгкие</label>
+					<p class="drop-catalog__type-content">
+						Под базовые нетребовательные задачи
+					</p>
+				</div>
+				<div class="drop-catalog__types-item">
+					<input type="checkbox" id="office-type" class="drop-catalog__input-check" />
+					<label for="office-type" class="drop-catalog__type">Типичные офисники</label>
+					<p class="drop-catalog__type-content">
+						Стабильны, надежны, бессмертные пони
+					</p>
+				</div>
+				<div class="drop-catalog__types-item">
+					<input type="checkbox" id="speed-type" class="drop-catalog__input-check" />
+					<label for="speed-type" class="drop-catalog__type">Шустрые с запасом</label>
+					<p class="drop-catalog__type-content">
+						Для многозадачности с актуальными характеристиками
+					</p>
+				</div>
+				<div class="drop-catalog__types-item">
+					<input type="checkbox" id="strong-type" class="drop-catalog__input-check" />
+					<label for="strong-type" class="drop-catalog__type">Мощные машинки</label>
+					<p class="drop-catalog__type-content">Звери, тащат всё</p>
+				</div>
+			</div>
+			<div class="drop-catalog__spec">
+				<div class="drop-catalog__spec-item">
+					<span class="drop-catalog__spec-title">Процессор:</span>
+					<ul class="list drop-catalog__spec-list">
+						<li>
+							<input type="checkbox" id="core-4" class="drop-catalog__input-check" />
+							<label class="drop-catalog__spec-btn" for="core-4">4 ядра</label>
+						</li>
+						<li>
+							<input type="checkbox" id="core-6" class="drop-catalog__input-check" />
+							<label class="drop-catalog__spec-btn" for="core-6">6 ядер</label>
+						</li>
+						<li>
+							<input type="checkbox" id="core-8" class="drop-catalog__input-check" />
+							<label class="drop-catalog__spec-btn" for="core-8">8 ядер</label>
+						</li>
+						<li>
+							<input type="checkbox" id="core-12" class="drop-catalog__input-check" />
+							<label class="drop-catalog__spec-btn" for="core-12">12 ядер</label>
+						</li>
+					</ul>
+				</div>
+				<div class="drop-catalog__spec-item">
+					<span class="drop-catalog__spec-title">Оперативная память:</span>
+					<ul class="list drop-catalog__spec-list">
+						<li>
+							<input type="checkbox" id="ram-4" class="drop-catalog__input-check" />
+							<label class="drop-catalog__spec-btn" for="ram-4">4 Гб</label>
+						</li>
+						<li>
+							<input type="checkbox" id="ram-8" class="drop-catalog__input-check" />
+							<label class="drop-catalog__spec-btn" for="ram-8">8 Гб</label>
+						</li>
+						<li>
+							<input type="checkbox" id="ram-16" class="drop-catalog__input-check" />
+							<label class="drop-catalog__spec-btn" for="ram-16">16 Гб</label>
+						</li>
+						<li>
+							<input type="checkbox" id="ram-32" class="drop-catalog__input-check" />
+							<label class="drop-catalog__spec-btn" for="ram-32">32 Гб</label>
+						</li>
+					</ul>
+				</div>
+				<div class="drop-catalog__spec-item">
+					<span class="drop-catalog__spec-title">Жесткий диск:</span>
+					<ul class="list drop-catalog__spec-list">
+						<li>
+							<input type="checkbox" id="disk-128" class="drop-catalog__input-check" />
+							<label class="drop-catalog__spec-btn" for="disk-128">128 Гб</label>
+						</li>
+						<li>
+							<input type="checkbox" id="disk-256" class="drop-catalog__input-check" />
+							<label class="drop-catalog__spec-btn" for="disk-256">256 Гб</label>
+						</li>
+						<li>
+							<input type="checkbox" id="disk-512" class="drop-catalog__input-check" />
+							<label class="drop-catalog__spec-btn" for="disk-512">512 Гб</label>
+						</li>
+						<li>
+							<input type="checkbox" id="disk-1t" class="drop-catalog__input-check" />
+							<label class="drop-catalog__spec-btn" for="disk-1t">1 Тб</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="drop-catalog__hit" id="catalog" style="background: url(&quot;img/hit.webp&quot;) 0 0 / cover no-repeat">
+				<span class="drop-catalog__hit-tag"> Хит продаж! </span>
+				<h5 class="drop-catalog__hit-title">Лучший ПК для дома в 2025 году!</h5>
+				<ul class="list drop-catalog__hit-spec">
+					<li>RAM: 8GB</li>
+					<li>SSD: 128GB</li>
+				</ul>
+				<button class="drop-catalog__btn-search">
+					<svg class="drop-catalog__search-icon">
+						<use xlink:href="img/icons/icons.svg#icon-search"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="sections" id="sections">
+		<div class="sections__overlay">
+			<button class="btn-clear sections__close" id="sections-close">
+				<svg class="sections__close-icon">
+					<use xlink:href='img/icons/icons.svg#icon-close'></use>
+				</svg>
+			</button>
+			<div class="sections__body">
+				<h5 class="sections__title">Дополнительные разделы:</h5>
+				<ul class="list sections__list">
+					<li><a href="#">Почему Junibox</a></li>
+					<li><a href="#">Корпоративным клиентам</a></li>
+					<li><a href="#">Техподдержка 24/7</a></li>
+				</ul>
+				<ul class="list sections__tags">
+					<li><a href="#">База знаний</a></li>
+					<li><a href="#">Драйверы</a></li>
+					<li><a href="#">Обмен и возврат</a></li>
+				</ul>
+				<div class="sections__contacts">
+					<h5 class="sections__contacts-title">Единые контакты:</h5>
+					<div class="sections__contacts-buttons">
+						<a href="mailto:info@junibox.ru" class="sections__contacts-btn">info@junibox.ru</a>
+						<a href="tel:88005553535" class="sections__contacts-btn">8 (800) 555-35-35</a>
+					</div>
+					<div class="sections__contacts-body">
+						<p class="sections__contacts-content">
+							Или пишите сразу в чат. <strong>По любым вопросам.</strong>
+						</p>
+						<ul class="list sections__social">
+							<li>
+								<a href="#" target="_blank" class="sections__social-btn">
+									<img src="img/wh.svg" alt="icon" class="sections__social-icon" />
+								</a>
+							</li>
+							<li>
+								<a href="#" target="_blank" class="sections__social-btn">
+									<img src="img/tg.svg" alt="icon" class="sections__social-icon" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-modal="buyer" class="modal modal-buyer">
+		<div class="modal__overlay">
+			<div class="modal__window modal-buyer__window">
+				<button class="modal__close">
+					<svg class="modal__close-icon">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+				<div class="modal__body">
+					<img src="img/modal-buyer.webp" alt="image" class="modal-buyer__bg" />
+					<span class="modal-buyer__tag">Для оптовых покупателей</span>
+					<h3 class="modal-buyer__title">
+						Произведем и поставим <br />
+						мини-ПК по вашему техзаданию
+					</h3>
+					<div class="modal-buyer__item-number">
+						<span class="modal-buyer__number"> 01 </span>
+						<p class="modal-buyer__item-content">
+							<strong>Отправьте техзадание</strong> <br />
+							напрямую нашим менеджерам <br />
+							удобным способом:
+						</p>
+					</div>
+					<div class="modal-buyer__contacts">
+						<ul class="list modal-buyer__social">
+							<li>
+								<a href="#" class="modal-buyer__social-btn">
+									<img src="img/wh.svg" alt="icon" class="modal-buyer__social-icon" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="modal-buyer__social-btn">
+									<img src="img/tg.svg" alt="icon" class="modal-buyer__social-icon" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="modal-buyer__social-btn">
+									<img src="img/mail.svg" alt="icon" class="modal-buyer__social-icon" />
+								</a>
+							</li>
+						</ul>
+						<a href="tel:88005553535" class="modal-buyer__tel">
+							Или позвоните:
+							<span>8 (800) 555-35-35 </span>
+						</a>
+					</div>
+					<div class="modal-buyer__item-number">
+						<span class="modal-buyer__number"> 01 </span>
+						<p class="modal-buyer__item-content">
+							<strong>Мы быстро рассмотрим и ответим </strong> <br />
+							по возможности производства, срокам и оптовой цене такой поставки.
+						</p>
+					</div>
+				</div>
+				<div class="modal__footer">
+					<p class="modal__footer-content">
+						Сотрудничество с Junibox — <br />
+						это ваше спокойствие, надежность и выгодные условия.
+					</p>
+					<a href="#" class="btn _simple modal__footer-btn">Узнать подробности</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-modal="buyer-2" class="modal modal-buyer">
+		<div class="modal__overlay">
+			<div class="modal__window modal-buyer__window">
+				<button class="modal__close">
+					<svg class="modal__close-icon">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+				<div class="modal__body">
+					<img src="img/modal-buyer-2.webp" alt="image" class="modal-buyer__bg _women" />
+					<span class="modal-buyer__tag">Для оптовых покупателей</span>
+					<h3 class="modal-buyer__title">
+						<span>Запрос на оптовый прайс</span> JuniBox Q-ube Pro
+					</h3>
+					<div class="modal-buyer__item-number">
+						<span class="modal-buyer__number"> 01 </span>
+						<p class="modal-buyer__item-content">
+							<strong>Просто напишите</strong> <br />
+							напрямую нашим менеджерам удобным способом::
+						</p>
+					</div>
+					<div class="modal-buyer__contacts">
+						<ul class="list modal-buyer__social">
+							<li>
+								<a href="#" class="modal-buyer__social-btn">
+									<img src="img/wh.svg" alt="icon" class="modal-buyer__social-icon" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="modal-buyer__social-btn">
+									<img src="img/tg.svg" alt="icon" class="modal-buyer__social-icon" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="modal-buyer__social-btn">
+									<img src="img/mail.svg" alt="icon" class="modal-buyer__social-icon" />
+								</a>
+							</li>
+						</ul>
+						<a href="tel:88005553535" class="modal-buyer__tel">
+							Или позвоните:
+							<span>8 (800) 555-35-35 </span>
+						</a>
+					</div>
+					<div class="modal-buyer__item-number">
+						<span class="modal-buyer__number"> 02 </span>
+						<p class="modal-buyer__item-content">
+							<strong>Мы составим КП</strong> <br />
+							в течение 1-2 дней.и.
+						</p>
+					</div>
+				</div>
+				<div class="modal__footer">
+					<p class="modal__footer-content">
+						Сотрудничество с Junibox — <br />
+						это ваше спокойствие, надежность и выгодные условия.
+					</p>
+					<a href="#" class="btn _simple modal__footer-btn">Узнать подробности</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-modal="category" class="modal modal-category">
+		<div class="modal__overlay">
+			<div class="modal__window modal-buyer__window">
+				<button class="modal__close">
+					<svg class="modal__close-icon">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+				<div class="modal__body modal-category__body">
+					<div class="modal-category__info">
+						<h3 class="modal-category__title">
+							Кратко: <br />
+							есть 4 категории
+						</h3>
+						<h5 class="modal-category__subtitle">
+							<span>Наши мини-ПК созданы</span> ровно под ваши задачи:
+						</h5>
+						<ul class="list modal-category__list">
+							<li>
+								<strong>Легкие:</strong>
+								базовые нетребовательные задачи
+							</li>
+							<li>
+								<strong>Типичные офисники:</strong>
+								стабильны и надежны
+							</li>
+							<li>
+								<strong>Шустрые с запасом:</strong>
+								для многозадачности с актуальными характеристиками
+							</li>
+							<li>
+								<strong>Мощные машинки:</strong>
+								подходящие для гейминга
+							</li>
+						</ul>
+					</div>
+					<div class="modal-category__table-wrapper">
+						<p class="modal-category__table-content">
+							Основной критерий: <br />
+							быстродействие (количество ядер процессора)
+						</p>
+						<div class="modal-category__table">
+							<div class="modal-category__table-item _rar">
+								<span>Опер. <br />
+									память, Гб</span>
+							</div>
+							<div class="modal-category__table-item _processor">
+								<span>Количество <br />
+									ядер процессора</span>
+							</div>
+							<div class="modal-category__table-item _rar">
+								<span>8</span>
+								<a href="#">Лёгкие</a>
+							</div>
+							<div class="modal-category__table-item _rar">
+								<span>16</span>
+								<a href="#">Офисники</a>
+							</div>
+							<div class="modal-category__table-item _rar">
+								<span>16 и выше</span>
+								<a href="#">Мощные</a>
+							</div>
+							<div class="modal-category__table-item _processor">
+								<span>4</span>
+							</div>
+							<div class="modal-category__table-item _processor">
+								<span>6</span>
+							</div>
+							<div class="modal-category__table-item _processor">
+								<span>8 и <br />
+									больше</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal__footer">
+					<p class="modal__footer-content">
+						Всё просто, <br />
+						чтобы вы не сомневались в выборе
+					</p>
+					<a href="#" class="btn _simple modal__footer-btn">
+						<svg class="modal__footer-btn-icon">
+							<use xlink:href="img/icons/icons.svg#icon-cursor-finger"></use>
+						</svg>
+						<span>Онлайн - подбор</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-modal="modal-connect" class="modal modal-connect">
+		<div class="modal__overlay">
+			<div class="modal__window modal-connect__window">
+				<button class="modal__close">
+					<svg class="modal__close-icon">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+				<div class="modal__body">
+					<h3 class="modal-connect__title">Напишите нам</h3>
+					<form action="#" class="modal-connect__form">
+						<div class="modal-connect__item">
+							<label for="connect-name" class="modal-connect__label">Имя</label>
+							<input type="text" id="connect-name" placeholder="Иванов Иван" class="modal-connect__input" />
+						</div>
+						<div class="modal-connect__item">
+							<label for="connect-tel" class="modal-connect__label">Телефон</label>
+							<input type="tel" id="connect-tel" placeholder="+7 (___) ___-__-__" class="modal-connect__input" />
+						</div>
+						<div class="modal-connect__item">
+							<textarea placeholder="Сообщение" class="modal-connect__input _big"></textarea>
+						</div>
+						<div class="modal-connect__form-nav">
+							<input checked type="checkbox" id="connect-policy" class="modal-connect__input-policy" />
+							<label for="connect-policy" class="modal-connect__label-policy">
+								<div class="modal-connect__rect-policy">
+									<svg class="modal-connect__rect-icon">
+										<use xlink:href='img/icons/icons.svg#icon-check'></use>
+									</svg>
+								</div>
+								<span>
+									Даю согласие на обработку
+									<a href="#">персональных данных</a>
+								</span>
+							</label>
+							<button class="btn-clear modal-connect__form-btn">
+								<span>Отправить</span>
+								<div class="modal-connect__btn-rect">
+									<svg class="modal-connect__btn-icon">
+										<use xlink:href="img/icons/icons.svg#icon-tg-rotate"></use>
+									</svg>
+								</div>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<main>
+
+		<section class="intro">
+			<div class="swiper intro__slider-bg">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="img/intro.webp" alt="image" class="intro__bg-img" />
+					</div>
+					<div class="swiper-slide">
+						<img src="img/intro-2.webp" alt="image" class="intro__bg-img" />
+					</div>
+					<div class="swiper-slide">
+						<img src="img/intro.webp" alt="image" class="intro__bg-img" />
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<img src="img/logo-white.svg" alt="logo" class="intro__logo" />
+				<div class="swiper intro__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<h1 class="intro__title title-1">
+								Новая линейка устройств 2025 года
+							</h1>
+							<p class="intro__content">
+								Уже доступна для заказа в нашем каталоге!
+							</p>
+						</div>
+						<div class="swiper-slide">
+							<h1 class="intro__title title-1">
+								Новая линейка устройств 2025 года 2
+							</h1>
+							<p class="intro__content">
+								Уже доступна для заказа в нашем каталоге!
+							</p>
+						</div>
+						<div class="swiper-slide">
+							<h1 class="intro__title title-1">
+								Новая линейка устройств 2025 года 3
+							</h1>
+							<p class="intro__content">
+								Уже доступна для заказа в нашем каталоге!
+							</p>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="btn intro__btn">Смотреть все предложения</a>
+				<div class="intro__slider-nav">
+					<button class="btn-clear intro__slider-btn _prev">
+						<svg class="intro__slider-arrow">
+							<use xlink:href="img/icons/icons.svg#icon-arrow-line"></use>
+						</svg>
+					</button>
+					<div class="intro__slider-numbers"></div>
+					<button class="btn-clear intro__slider-btn _next">
+						<svg class="intro__slider-arrow">
+							<use xlink:href="img/icons/icons.svg#icon-arrow-line"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="articles">
+			<div class="container articles__container">
+				<img src="img/logo-white.svg" alt="logo" class="section-logo" />
+				<div class="articles__head">
+					<h2 class="title-2 articles__title">
+						Российский производитель мини-пк
+						<span>Идеальных для любых нужд</span>
+					</h2>
+					<a data-da=".articles__container,743" href="#" class="btn _gray articles__btn">
+						<svg class="btn__icon">
+							<use xlink:href="img/icons/icons.svg#icon-btn"></use>
+						</svg>
+						<span>Помочь с выбором</span>
+					</a>
+				</div>
+				<div class="swiper articles__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="img/article.webp" alt="image" class="articles__slide-img" />
+							<h5 class="articles__slide-title">Игровая мощность на ладони</h5>
+							<p class="articles__slide-content">
+								В мини-корпусе помещается то же, что и в обычных форматах ПК: те же
+								процессоры, SSD, видео-карты. Решения есть для учебы, в офис,
+								серверные, геймерам.
+							</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/article.webp" alt="image" class="articles__slide-img" />
+							<h5 class="articles__slide-title">
+								Выгода при покупке и многие годы после нее
+							</h5>
+							<p class="articles__slide-content">
+								Оптимальные цены в каждой категории и долгий срок службы, экономия
+								на ремонте и замене: они просто не нужны. А еще расход
+								электроэнергии в 6 раз ниже.
+							</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/article.webp" alt="image" class="articles__slide-img" />
+							<h5 class="articles__slide-title">Игровая мощность на ладони</h5>
+							<p class="articles__slide-content">
+								В мини-корпусе помещается то же, что и в обычных форматах ПК: те же
+								процессоры, SSD, видео-карты. Решения есть для учебы, в офис,
+								серверные, геймерам.
+							</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/article.webp" alt="image" class="articles__slide-img" />
+							<h5 class="articles__slide-title">
+								Выгода при покупке и многие годы после нее
+							</h5>
+							<p class="articles__slide-content">
+								Оптимальные цены в каждой категории и долгий срок службы, экономия
+								на ремонте и замене: они просто не нужны. А еще расход
+								электроэнергии в 6 раз ниже.
+							</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/article.webp" alt="image" class="articles__slide-img" />
+							<h5 class="articles__slide-title">Игровая мощность на ладони</h5>
+							<p class="articles__slide-content">
+								В мини-корпусе помещается то же, что и в обычных форматах ПК: те же
+								процессоры, SSD, видео-карты. Решения есть для учебы, в офис,
+								серверные, геймерам.
+							</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/article.webp" alt="image" class="articles__slide-img" />
+							<h5 class="articles__slide-title">
+								Выгода при покупке и многие годы после нее
+							</h5>
+							<p class="articles__slide-content">
+								Оптимальные цены в каждой категории и долгий срок службы, экономия
+								на ремонте и замене: они просто не нужны. А еще расход
+								электроэнергии в 6 раз ниже.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="tasks">
+			<div class="container tasks__container">
+				<img src="img/logo-white.svg" alt="logo" class="section-logo" />
+				<div class="tasks__head">
+					<h2 class="title-2 tasks__title">
+						Идеально подойдет под <br />
+						любые задачи
+						<span>стоит только подобрать нужную модель</span>
+					</h2>
+					<a data-da=".tasks__container,743" href="#" class="btn _gray tasks__btn">
+						<svg class="btn__icon">
+							<use xlink:href="img/icons/icons.svg#icon-btn"></use>
+						</svg>
+						<span>Помочь с выбором</span>
+					</a>
+				</div>
+				<div class="tasks__body">
+					<a href="#" class="tasks__item">
+						<img src="img/tasks.webp" alt="image" class="tasks__item-bg" />
+						<div class="tasks__item-head">
+							<span class="tasks__item-tag">Домой, в офис</span>
+							<h5 class="tasks__title">Легкие</h5>
+						</div>
+						<p class="tasks__content">
+							Прекрасны для бытовых не требовательных задач, просмотра кино,
+							серфинга в интернете, удаленной работы, хранения информации
+						</p>
+						<div class="tasks__item-line">
+							<ul class="list tasks__item-list">
+								<li>RAM: 4GB</li>
+								<li>SSD: 256GB</li>
+							</ul>
+							<div class="tasks__item-circle">
+								<svg class="tasks__circle-icon">
+									<use xlink:href="img/icons/icons.svg#icon-search"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="btn _primary tasks__item-btn">
+							<svg class="btn__icon">
+								<use xlink:href="img/icons/icons.svg#icon-btn"></use>
+							</svg>
+							<span>Посмотреть модели этой категории</span>
+						</div>
+					</a>
+					<a href="#" class="tasks__item">
+						<img src="img/tasks.webp" alt="image" class="tasks__item-bg" />
+						<div class="tasks__item-head">
+							<span class="tasks__item-tag">Домой, в офис</span>
+							<h5 class="tasks__title">Легкие</h5>
+						</div>
+						<p class="tasks__content">
+							Прекрасны для бытовых не требовательных задач, просмотра кино,
+							серфинга в интернете, удаленной работы, хранения информации
+						</p>
+						<div class="tasks__item-line">
+							<ul class="list tasks__item-list">
+								<li>RAM: 4GB</li>
+								<li>SSD: 256GB</li>
+							</ul>
+							<div class="tasks__item-circle">
+								<svg class="tasks__circle-icon">
+									<use xlink:href="img/icons/icons.svg#icon-search"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="btn _primary tasks__item-btn">
+							<svg class="btn__icon">
+								<use xlink:href="img/icons/icons.svg#icon-btn"></use>
+							</svg>
+							<span>Посмотреть модели этой категории</span>
+						</div>
+					</a>
+					<a href="#" class="tasks__item">
+						<img src="img/tasks.webp" alt="image" class="tasks__item-bg" />
+						<div class="tasks__item-head">
+							<span class="tasks__item-tag">Домой, в офис</span>
+							<h5 class="tasks__title">Легкие</h5>
+						</div>
+						<p class="tasks__content">
+							Прекрасны для бытовых не требовательных задач, просмотра кино,
+							серфинга в интернете, удаленной работы, хранения информации
+						</p>
+						<div class="tasks__item-line">
+							<ul class="list tasks__item-list">
+								<li>RAM: 4GB</li>
+								<li>SSD: 256GB</li>
+							</ul>
+							<div class="tasks__item-circle">
+								<svg class="tasks__circle-icon">
+									<use xlink:href="img/icons/icons.svg#icon-search"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="btn _primary tasks__item-btn">
+							<svg class="btn__icon">
+								<use xlink:href="img/icons/icons.svg#icon-btn"></use>
+							</svg>
+							<span>Посмотреть модели этой категории</span>
+						</div>
+					</a>
+					<a href="#" class="tasks__item">
+						<img src="img/tasks.webp" alt="image" class="tasks__item-bg" />
+						<div class="tasks__item-head">
+							<span class="tasks__item-tag">Домой, в офис</span>
+							<h5 class="tasks__title">Легкие</h5>
+						</div>
+						<p class="tasks__content">
+							Прекрасны для бытовых не требовательных задач, просмотра кино,
+							серфинга в интернете, удаленной работы, хранения информации
+						</p>
+						<div class="tasks__item-line">
+							<ul class="list tasks__item-list">
+								<li>RAM: 4GB</li>
+								<li>SSD: 256GB</li>
+							</ul>
+							<div class="tasks__item-circle">
+								<svg class="tasks__circle-icon">
+									<use xlink:href="img/icons/icons.svg#icon-search"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="btn _primary tasks__item-btn">
+							<svg class="btn__icon">
+								<use xlink:href="img/icons/icons.svg#icon-btn"></use>
+							</svg>
+							<span>Посмотреть модели этой категории</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="offer">
+			<div class="container">
+				<div class="offer__body">
+					<img src="img/women.webp" alt="image" class="offer__img">
+					<img src="img/logo-white.svg" alt="logo" class="section-logo offer__logo" />
+					<h2 class="title-2 offer__title">Это не просто мини-ПК. Это больше.</h2>
+					<div class="offer__info">
+						<h5 class="offer__info-title">
+							С самого начала <br> мы не хотели быть просто производителями мини-ПК.
+						</h5>
+						<p class="offer__info-content">
+							В этом нет уникальности, только погоня за постоянно растущими
+							характеристиками: кто запихнет лучшие детали по лучшей цене в корпус.
+						</p>
+						<a href="#" class="btn offer__btn _primary _big">
+							<svg class="btn__icon">
+								<use xlink:href="img/icons/icons.svg#icon-btn"></use>
+							</svg>
+							<div>
+								<span class="btn__content">Узнайте, почему </span>
+								<span>вы захотите выбрать именно Junibox.</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="top">
+			<div class="container">
+				<div class="top__head">
+					<h2 class="top__title">ТОП 3</h2>
+					<span class="top__head-content">Самые популярные модели</span>
+				</div>
+				<div class="swiper top__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#" class="top__slide-gallery">
+								<img src="img/top.webp" alt="image" class="top__slide-img" />
+								<div class="top__slide-tags">
+									<span class="top__slide-tag">Хит продаж!</span>
+								</div>
+								<div class="btn _primary top__slide-btn">
+									<svg class="btn__icon">
+										<use xlink:href="img/icons/icons.svg#icon-warn"></use>
+									</svg>
+									<span>Узнать больше</span>
+								</div>
+							</a>
+							<div class="top__slide-info">
+								<h5 class="top__slide-title">x4d</h5>
+								<p class="top__slide-content">Типичный офисник</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="top__slide-gallery">
+								<img src="img/top.webp" alt="image" class="top__slide-img" />
+								<div class="top__slide-tags">
+									<span class="top__slide-tag">Хит продаж!</span>
+									<span class="top__slide-tag">Новинка 2024</span>
+								</div>
+								<div class="btn _primary top__slide-btn">
+									<svg class="btn__icon">
+										<use xlink:href="img/icons/icons.svg#icon-warn"></use>
+									</svg>
+									<span>Узнать больше</span>
+								</div>
+							</a>
+							<div class="top__slide-info">
+								<h5 class="top__slide-title">x4d</h5>
+								<p class="top__slide-content">Типичный офисник</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="top__slide-gallery">
+								<img src="img/top.webp" alt="image" class="top__slide-img" />
+								<div class="top__slide-tags">
+									<span class="top__slide-tag">Хит продаж!</span>
+								</div>
+								<div class="btn _primary top__slide-btn">
+									<svg class="btn__icon">
+										<use xlink:href="img/icons/icons.svg#icon-warn"></use>
+									</svg>
+									<span>Узнать больше</span>
+								</div>
+							</a>
+							<div class="top__slide-info">
+								<h5 class="top__slide-title">x4d</h5>
+								<p class="top__slide-content">Типичный офисник</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="video-sect">
+			<div class="container video-sect__container">
+				<div class="video-sect__wrapper">
+					<video src="files/video.mp4" loop="true" muted autoplay class="video-sect__video"></video>
+					<div class="video-sect__info">
+						<a href="files/video.mp4" data-fancybox="video" class="btn-video">
+							<svg class="btn-video__icon">
+								<use xlink:href="img/icons/icons.svg#icon-video"></use>
+							</svg>
+						</a>
+						<span class="video-sect__info-title">Реальное видео</span>
+						<p class="video-sect__content">
+							снятое на наших заводах - изготовителях
+						</p>
+					</div>
+					<div class="video-sect__body">
+						<span class="video-sect__tag">Для оптовых покупателей</span>
+						<img src="img/logo-gray.svg" alt="logo" class="video-sect__logo" />
+						<h5 class="title-2 video-sect__body-title">Российский производитель</h5>
+						<ul class="list video-sect__list">
+							<li class="video-sect__item">
+								Поставляем по оптовым ценам <br />
+								и специальным условиям <br />
+								для каждого клиента
+							</li>
+							<li class="video-sect__item">Доставка из наличия за 2 дня</li>
+							<li class="video-sect__item">
+								Или произведем по вашему ТЗ — и партия будет у вас через 40-50 дней
+							</li>
+						</ul>
+						<button data-modal-btn="buyer" class="btn _primary">
+							<span>Подробнее</span>
+							<svg class="btn__arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrows"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<nav class="footer__nav">
+				<ul class="list footer__list">
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">Подбор</a></li>
+					<li><a href="#">Гарантия</a></li>
+					<li><a href="#">Поддержка</a></li>
+					<li><a href="#">О Junibox</a></li>
+					<li><a href="#">Обмен и возврат</a></li>
+					<li><a href="#">База знаний</a></li>
+					<li><a href="#">Техподдержка</a></li>
+					<li><a href="#">Драйверы</a></li>
+					<li><a href="#">для поставщиков</a></li>
+				</ul>
+			</nav>
+			<div class="footer__wrapper">
+				<div class="footer__info">
+					<a href="/" class="footer__logo">
+						<img src="img/logo.svg" alt="logo" class="footer__logo-img" />
+					</a>
+					<p class="footer__address">
+						119049 <br />
+						Москва, ул. Донская, <br />
+						дом 8, строение 1, офис 231Б
+					</p>
+					<ul class="list footer__info-list">
+						<li><a href="#">Использование cookies</a></li>
+						<li><a href="#">Политика конфиденциальности</a></li>
+						<li><a href="#">Пользовательское соглашение</a></li>
+					</ul>
+					<p class="footer__copyright">2021-2024 Junibox | Все права защищены.</p>
+				</div>
+				<div class="footer__contacts">
+					<button data-modal-btn="modal-connect" class="btn _stroke _min footer__contacts-btn">
+						<svg class="btn__icon _min">
+							<use xlink:href="img/icons/icons.svg#icon-message"></use>
+						</svg>
+						<span>Связаться с нами</span>
+					</button>
+					<a href="mailto:info@junibox.ru" class="footer__mail">info@junibox.ru</a>
+					<a href="tel:88005553535" class="footer__tel">8 (800) 555-35-35</a>
+					<span class="footer__graphic">(Круглосуточно)</span>
+					<ul class="list footer__social">
+						<li>
+							<a href="#" target="_blank" class="footer__social-btn">
+								<svg class="footer__social-icon">
+									<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" class="footer__social-btn">
+								<svg class="footer__social-icon">
+									<use xlink:href="img/icons/icons.svg#icon-wh"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" class="footer__social-btn">
+								<svg class="footer__social-icon">
+									<use xlink:href="img/icons/icons.svg#icon-mail"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/app.min.js?_v=20250119170731"></script>
+</body>
+
+</html>

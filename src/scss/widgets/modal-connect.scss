@@ -1,0 +1,125 @@
+.modal-connect {
+  &__window {
+    width: 390px;
+    .modal__body {
+      padding: 0px 0px 30px 0px;
+      border-radius: 10px;
+      background: var(--storm);
+      box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+  &__title {
+    margin: 35px 30px 45px 30px;
+  }
+  &__form {
+  }
+  &__item {
+    padding: 12px 30px;
+    &:nth-child(3) {
+      padding-top: 20px;
+    }
+    &:not(:nth-child(3)) {
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+  &__label {
+    display: block;
+    font-size: 12px;
+    color: #808080;
+  }
+  &__input {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    width: 100%;
+
+    font-size: 16px;
+    color: #1e1e1e;
+
+    &::placeholder {
+      color: #808080;
+    }
+
+    &._big {
+      min-height: 150px;
+      resize: none;
+    }
+  }
+  &__form-nav {
+    @include flex-between;
+    padding: 0 30px;
+    gap: 15px;
+    margin-top: 40px;
+  }
+  &__input-policy {
+    display: none;
+    &:checked + label {
+      .modal-connect__rect-icon {
+        display: block;
+      }
+    }
+  }
+  &__label-policy {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 15px;
+
+    span {
+      max-width: 77px;
+      color: #808080;
+      font-size: 10px;
+
+      a {
+        text-decoration: underline;
+        @include hover {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+  &__rect-policy {
+    @include flex-center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--alto);
+    border-radius: 5px;
+  }
+  &__rect-icon {
+    display: none;
+    color: var(--primary);
+    width: 15px;
+    height: 15px;
+  }
+  &__form-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #808080;
+    font-size: 14px;
+
+    @include hover {
+      .modal-connect__btn-rect {
+        background-color: var(--primary);
+        color: white
+      }
+    }
+  }
+  &__btn-rect {
+    @include flex-center;
+    border-radius: 5px;
+    background-color: var(--alto);
+    width: 50px;
+    height: 50px;
+    color: var(--primary);
+
+    transition: color .2s ease, background-color .2s ease;
+  }
+  &__btn-icon {
+    width: 15px;
+    height: 15px;
+  }
+}
