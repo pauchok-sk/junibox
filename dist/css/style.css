@@ -285,18 +285,19 @@ body {
   gap: 10px;
   position: relative;
   cursor: pointer;
-  border: none;
   overflow: hidden;
+  border: none;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   min-height: 55px;
   padding: 10px 30px;
-  border-radius: 100px;
+  background: linear-gradient(180deg,#f1ebe7 -100%,#9b918c 100%);
   box-shadow: 0 4px 5px 0 rgba(240,234,230,.4) inset,0 10px 20px -10px rgba(131,118,111,.93);
   font-size: 12px;
   text-align: center;
   font-weight: 700;
+  border-radius: 100px;
   color: var(--storm);
   z-index: 1;
   transition: box-shadow .2s ease
@@ -305,7 +306,7 @@ body {
 .btn::before {
   position: absolute;
   content: "";
-  inset: 0;
+  inset: 1px;
   border-radius: 100px;
   z-index: -1;
   transition: opacity .2s ease
@@ -333,7 +334,12 @@ body {
 }
 .btn._gray {
   box-shadow: 0 20px 20px -20px rgba(84,81,79,.54);
+  background: 0 0;
   background-color: rgba(0,0,0,0)
+}
+.btn._gray::after,
+.btn._gray::before {
+  inset: 0
 }
 .btn._gray::before {
   background: var(--chalice)
@@ -351,6 +357,7 @@ body {
   animation: animationGlare 2.5s infinite ease-out
 }
 .btn._primary {
+  background: linear-gradient(180deg,#9fc7fb -100%,#254b7c 160%);
   box-shadow: 0 15px 20px -10px rgba(84,81,79,.54)
 }
 .btn._primary::before {
@@ -374,9 +381,10 @@ body {
   color: var(--main);
   border-color: var(--chalice);
   background-color: rgba(0,0,0,0);
+  background: 0 0;
   box-shadow: none;
   border: 1px solid var(--chalice);
-  transition: background-color .2s ease
+  transition: background-color .2s ease,border-color .2s ease
 }
 .btn._stroke::after,
 .btn._stroke::before {
@@ -415,9 +423,7 @@ body {
   border-radius: 50%;
   background-color: rgba(238,237,235,.8);
   color: var(--primary);
-  transition: -webkit-transform .2s ease;
-  transition: transform .2s ease;
-  transition: transform .2s ease,-webkit-transform .2s ease
+  transition: background-color .2s ease,color .2s ease
 }
 .btn-video._primary {
   background-color: var(--primary);
@@ -540,7 +546,9 @@ body {
   font-size: 20px;
   padding: 10px 25px;
   border-radius: 100px;
-  border: 1px solid var(--primary)
+  border: 1px solid var(--primary);
+  -webkit-transform: translateY(-4px);
+  transform: translateY(-4px)
 }
 .title-3 {
   font-size: 32px;
@@ -1622,6 +1630,7 @@ body {
 .header__soc {
   display: flex;
   gap: 30px;
+  padding-left: 35px;
   flex: 0 1 250px
 }
 .header__soc-btn {
@@ -1645,8 +1654,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 20px;
-  flex: 0 1 250px
+  padding-right: 30px;
+  gap: 20px
 }
 .header__mail {
   position: relative;
@@ -1725,6 +1734,7 @@ body {
   width: fit-content;
   padding: 15px 35px;
   min-height: 65px;
+  text-transform: uppercase;
   border-radius: 100px 0 0 100px;
   transition: background-color .2s ease
 }
@@ -1879,6 +1889,9 @@ body {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg)
 }
+.intro__slider-btn.swiper-button-disabled {
+  pointer-events: none
+}
 .intro__slider-arrow {
   width: 30px;
   height: 15px
@@ -1924,7 +1937,12 @@ body {
   margin: 0
 }
 .articles__btn {
-  flex-shrink: 0
+  flex-shrink: 0;
+  font-weight: 500!important;
+  font-size: 14px!important;
+  line-height: 160%!important;
+  min-height: 60px!important;
+  letter-spacing: .28px
 }
 .articles__slider {
   overflow: visible!important
@@ -1947,7 +1965,8 @@ body {
 }
 .articles__slide-content {
   font-size: 14px;
-  margin: 0
+  margin: 0;
+  line-height: 160%
 }
 .tasks {
   padding-bottom: 100px
@@ -1962,6 +1981,13 @@ body {
 .tasks__title {
   max-width: 785px;
   margin: 0
+}
+.tasks__btn {
+  font-weight: 500!important;
+  font-size: 14px!important;
+  line-height: 160%!important;
+  min-height: 60px!important;
+  letter-spacing: .28px
 }
 .tasks__body {
   display: grid;
@@ -2009,7 +2035,7 @@ body {
   font-weight: 500;
   color: var(--primary)
 }
-.tasks__title {
+.tasks__item-title {
   font-size: 36px;
   font-weight: 400;
   margin: 0
@@ -2087,7 +2113,7 @@ body {
   margin: 0 0 30px 0!important
 }
 .offer__title {
-  max-width: 630px;
+  max-width: 570px;
   margin: 0 0 80px 0
 }
 .offer__info-title {
@@ -2193,6 +2219,8 @@ body {
 }
 .top__slide-btn {
   opacity: 0;
+  font-size: 14px!important;
+  font-weight: 500!important;
   transition: opacity .2s ease
 }
 .top__slide-info {
@@ -2210,7 +2238,7 @@ body {
 .video-sect {
   position: relative;
   min-height: 100vh;
-  padding: 50px 0 110px 0;
+  padding: 100px 0;
   z-index: 1
 }
 .video-sect::before {
@@ -2267,6 +2295,12 @@ body {
   border-radius: 50px;
   background-color: var(--storm);
   max-width: 450px
+}
+.video-sect__body .btn {
+  text-transform: uppercase;
+  font-size: 14px!important;
+  line-height: 160%!important;
+  letter-spacing: .28px!important
 }
 .video-sect__tag {
   display: block;
@@ -7523,9 +7557,8 @@ body {
   justify-content: center;
   width: 25px;
   height: 25px;
-  opacity: .5;
   color: var(--main);
-  transition: opacity .2s ease
+  transition: color .2s ease
 }
 .footer__social-btn::before {
   display: none
@@ -9909,6 +9942,8 @@ html.with-fancybox body.hide-scrollbar {
     font-size: 32px
   }
   .title-2 span {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
     font-size: 16px
   }
   .title-3 {
@@ -9999,7 +10034,7 @@ html.with-fancybox body.hide-scrollbar {
   .tasks__item-tag {
     font-size: 12px
   }
-  .tasks__title {
+  .tasks__item-title {
     font-size: 32px
   }
   .tasks__item-line {
@@ -10027,7 +10062,7 @@ html.with-fancybox body.hide-scrollbar {
     width: 420px
   }
   .video-sect {
-    padding-bottom: 50px
+    padding: 50px 0
   }
   .video-sect__body {
     padding: 30px;
@@ -10628,6 +10663,14 @@ html.with-fancybox body.hide-scrollbar {
     height: 390px
   }
 }
+@media (max-width:800px) {
+  .header__soc {
+    padding-left: 0
+  }
+  .header__contacts {
+    padding-right: 0
+  }
+}
 @media (max-width:760px) {
   .modal-buyer__bg {
     right: -80px
@@ -10885,7 +10928,7 @@ html.with-fancybox body.hide-scrollbar {
   }
   .tasks__content {
     max-width: none;
-    margin-top: 40px
+    margin-top: 20px
   }
   .offer {
     position: relative;
@@ -10979,6 +11022,9 @@ html.with-fancybox body.hide-scrollbar {
     max-width: none;
     width: 100%;
     padding: 30px 50px
+  }
+  .video-sect__body .btn {
+    letter-spacing: .24px!important
   }
   .video-sect__tag {
     font-size: 12px
@@ -13311,14 +13357,15 @@ html.with-fancybox body.hide-scrollbar {
     background-color: var(--blue)
   }
   .btn._stroke:hover {
-    background-color: var(--chalice)
+    background-color: var(--chalice);
+    border-color: var(--bg)
   }
   .btn._stroke:hover .btn__icon {
     color: var(--bg)
   }
   .btn-video:hover {
-    -webkit-transform: scale(1.07);
-    transform: scale(1.07)
+    color: var(--storm);
+    background-color: var(--blue)
   }
   .btn-video._primary:hover {
     background-color: var(--blue);
@@ -13630,7 +13677,7 @@ html.with-fancybox body.hide-scrollbar {
     right: 0
   }
   .footer__social-btn:hover {
-    opacity: 1
+    color: #000
   }
 }
 @media (hover:none) {
@@ -13647,14 +13694,15 @@ html.with-fancybox body.hide-scrollbar {
     background-color: var(--blue)
   }
   .btn._stroke:active {
-    background-color: var(--chalice)
+    background-color: var(--chalice);
+    border-color: var(--bg)
   }
   .btn._stroke:active .btn__icon {
     color: var(--bg)
   }
   .btn-video:active {
-    -webkit-transform: scale(1.07);
-    transform: scale(1.07)
+    color: var(--storm);
+    background-color: var(--blue)
   }
   .btn-video._primary:active {
     background-color: var(--blue);
@@ -13966,7 +14014,7 @@ html.with-fancybox body.hide-scrollbar {
     right: 0
   }
   .footer__social-btn:active {
-    opacity: 1
+    color: #000
   }
 }
 @media (hover:hover) {

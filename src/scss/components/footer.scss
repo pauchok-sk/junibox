@@ -175,14 +175,13 @@
     @include flex-center;
     width: 25px;
     height: 25px;
-    opacity: 0.5;
     color: var(--main);
-    transition: opacity .2s ease;
+    transition: color .2s ease;
     &::before {
       display: none;
     }
     @include hover {
-      opacity: 1;
+      color: black;
     }
   }
   &__social-icon {

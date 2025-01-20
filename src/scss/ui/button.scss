@@ -12,13 +12,17 @@
   gap: 10px;
   position: relative;
   cursor: pointer;
-  border: none;
   overflow: hidden;
+  border: none;
 
   width: fit-content;
   min-height: 55px;
   padding: 10px 30px;
-  border-radius: 100px;
+  background: linear-gradient(
+    180deg,
+    rgba(241, 235, 231, 1) -100%,
+    rgba(155, 145, 140, 1) 100%
+  );
   box-shadow:
     0px 4px 5px 0px rgba(240, 234, 230, 0.4) inset,
     0px 10px 20px -10px rgba(131, 118, 111, 0.93);
@@ -26,6 +30,7 @@
   font-size: 12px;
   text-align: center;
   font-weight: 700;
+  border-radius: 100px;
   color: var(--storm);
   z-index: 1;
   transition: box-shadow 0.2s ease;
@@ -43,7 +48,7 @@
   &::after {
     position: absolute;
     content: "";
-    inset: 0;
+    inset: 1px;
     border-radius: 100px;
     z-index: -1;
     transition: opacity 0.2s ease;
@@ -81,7 +86,12 @@
 
   &._gray {
     box-shadow: 0px 20px 20px -20px rgba(84, 81, 79, 0.54);
+    background: none;
     background-color: transparent;
+    &::before,
+    &::after {
+      inset: 0;
+    }
     &::before {
       background: var(--chalice);
     }
@@ -108,6 +118,11 @@
   }
 
   &._primary {
+    background: linear-gradient(
+      180deg,
+      rgba(159, 199, 251, 1) -100%,
+      rgba(37, 75, 124, 1) 160%
+    );
     box-shadow: 0px 15px 20px -10px rgba(84, 81, 79, 0.54);
     &::before {
       background: radial-gradient(
@@ -129,7 +144,9 @@
     box-shadow: none;
     padding: 15px 25px;
     background-color: var(--primary-dark);
-    transition: background-color 0.2s ease, color .2s ease;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
     @include hover {
       background-color: var(--blue);
     }
@@ -144,11 +161,15 @@
     color: var(--main);
     border-color: var(--chalice);
     background-color: transparent;
+    background: none;
     box-shadow: none;
     border: 1px solid var(--chalice);
-    transition: background-color 0.2s ease;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
     @include hover {
       background-color: var(--chalice);
+      border-color: var(--bg);
       .btn__icon {
         color: var(--bg);
       }
@@ -194,9 +215,12 @@
   border-radius: 50%;
   background-color: rgba(238, 237, 235, 0.8);
   color: var(--primary);
-  transition: transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
   @include hover {
-    transform: scale(1.07);
+    color: var(--storm);
+    background-color: var(--blue);
   }
 
   &._primary {

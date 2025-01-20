@@ -95,6 +95,9 @@
     &._prev {
       transform: rotate(180deg);
     }
+    &.swiper-button-disabled {
+      pointer-events: none;
+    }
     @include hover {
       color: var(--main);
     }

@@ -107,6 +107,8 @@
   }
   &__slide-btn {
     opacity: 0;
+    font-size: 14px !important;
+    font-weight: 500 !important;
     transition: opacity 0.2s ease;
   }
   &__slide-info {
